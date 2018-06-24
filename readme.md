@@ -165,3 +165,7 @@ https://github.com/atlassian/react-beautiful-dnd/blob/cea1a62c0011f8560edf7935dc
 ## 翻译
 
 - 使用[translate-mds](https://github.com/chinanf-boy/translate-mds) 完成初稿
+
+## 欢迎
+
+👏 `Issue` / 最好就直接 `Pull` 啦 😊
