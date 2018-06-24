@@ -1,6 +1,11 @@
 
 ![react beautiful dnd](https://raw.githubusercontent.com/alexreardon/files/master/resources/react-beautiful-dnd-logo.png)
 
+<details>
+
+<summary> ❤️ 文档目录 ❤️</summary>
+
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
@@ -138,6 +143,8 @@
   - [合作者](#%E5%90%88%E4%BD%9C%E8%80%85)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+</details>
 
 # react-beautiful-dnd
 
