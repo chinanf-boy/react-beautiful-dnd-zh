@@ -291,55 +291,55 @@
 
 ## 关心交互细节
 
-### 重点管理
+### 焦点管理
 
-`react-beautiful-dnd`不会创建任何包装元素. 这意味着它不会影响文档的常用选项卡流程. 例如,如果你正在包装一个*锚*标签,则用户将直接标签到锚点,而不是围绕该标签的元素*锚*. 无论你包装什么元素都会得到一个`tab-index`以确保用户可以选择要素以执行键盘拖动. 
+`react-beautiful-dnd`不会创建任何包装元素. 这意味着它不会影响文档的常用选项卡流程. 例如,如果你正在包装一个*目标*标签,则用户将直接 tab 到目标点,而不是一个围绕该*目标*的元素. 无论你包装什么元素都会得到一个`tab-index`以确保用户通过 tab 拖动. 
 
 ### 自动滚动
 
-当用户拖动一个`Draggable`靠近边缘*容器*我们会自动滚动容器,以便为其腾出空间`Draggable`. 
+当用户拖动一个`Draggable{可拖动物品}`靠近*容器*边缘时, 我们会自动滚动容器,以便为其腾出`Draggable`空间. 
 
-> 一个*容器*是一个`Droppable`这是可滚动的或有一个滚动父 - 或`window`. 
+> 一个*容器*称为一个`Droppable`,是因为可滚动的或有一个滚动父辈 - 或`window`. 
 
 | 鼠标和触摸                                                                                                                     | 键盘                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | ![auto-scroll-mouse](https://user-images.githubusercontent.com/2182637/36520373-c9e2cb7e-17e4-11e8-9e93-4d2389d51fa4.gif) | ![auto-scroll-keyboard](https://user-images.githubusercontent.com/2182637/36520375-cc1aa45c-17e4-11e8-842d-94aed694428a.gif) |
 
-它也适用于所有输入类型的多列表配置
+它也适用于多列表所有输入类型的配置
 
 | 鼠标和触摸                                                                                                                           | 键盘                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | ![auto-scroll-board-mouse](https://user-images.githubusercontent.com/2182637/36520670-57752526-17e6-11e8-95b3-b5a3978a5312.gif) | ![auto-scroll-board-keyboard](https://user-images.githubusercontent.com/2182637/36520650-3d3638f8-17e6-11e8-9cba-1fb439070285.gif) |
 
-#### 对于鼠标和触摸输入🐭📱
+#### 对于鼠标和触摸输入 🐭📱
 
-当一个中心`Draggable`在距离容器边缘很小的距离内,我们开始自动滚动. 随着用户靠近容器的边缘,我们增加了自动滚动的速度. 这种加速度使用缓动功能来指数地增加我们移向边缘越近的加速度. 我们从容器的真实边缘到达最大加速度,使得用户不需要非常精确以获得最大的滚动速度. 该逻辑适用于可滚动的任何边缘. 
+当一个`Draggable`中心在距离容器边缘很小的距离内,我们开始自动滚动. 随着用户靠近容器的边缘,我们增加了自动滚动的速度. 这种加速度使用缓动功能来指数地增加我们移向边缘越近的加速度. 我们从容器的真实边缘到达最大加速度,使得用户不需要非常精确以获得最大的滚动速度. 该逻辑适用于可滚动的任何边缘. 
 
 自动滚动所需的距离分别基于容器的垂直和水平滚动的高度或宽度的百分比. 通过使用百分比而不是原始像素值,无论容器的大小和形状如何,我们都可以获得丰富的体验. 
 
 ##### 鼠标滚轮和触控板
 
-除了自动滚动,我们还允许用户滚动窗口或a`Droppable`手动使用他们的*鼠标滚轮*要么*触控板*👌
+除了自动滚动,我们还允许用户滚动窗口或一个`Droppable`手动使用他们的*鼠标滚轮*要么*触控板*👌
 
 ##### 关于大`Draggable`的笔记
 
 如果`Draggable`比您要滚动的轴上的容器大 - 我们将不允许在该轴上滚动. 例如,如果你有一个`Draggable`这比窗口的高度更长,我们不会自动垂直滚动. 不过,我们仍然会允许水平滚动. 
 
-##### iOS自动滚动摇晃📱🤕
+##### iOS自动滚动摇晃 📱🤕
 
 当在iOS浏览器 (webkit) 上自动滚动时`Draggable`明显地震动. 这是由于一个[与webkit的错误](https://bugs.webkit.org/show*bug.cgi?id=181954)没有已知的工作. 我们尝试了很长时间来解决这个问题!如果你看到这种改进感兴趣,请与我们联系[webkit问题](https://bugs.webkit.org/show*bug.cgi?id=181954). 
 
-#### 用于键盘拖动🎹
+#### 用于键盘拖动 🎹
 
-拖动键盘时,我们也会根据需要正确更新滚动位置. 为了移动一个`Draggable`进入正确的位置,我们可以做一个组合`Droppable`滚动,`window`滚动和手动移动以确保`Draggable`响应用户移动指令结束在正确的位置. 这是老板🔥. 
+拖动键盘时,我们也会根据需要正确更新滚动位置. 为了移动一个`Draggable`进入正确的位置,我们可以做一个`Droppable`滚动,`window`滚动和手动移动的组合以确保`Draggable`响应用户移动指令结束在正确的位置. 这是大重点🔥. 
 
 对于有视觉障碍的用户来说,这是惊人的,因为他们可以在大列表中正确移动项目而无需使用鼠标定位. 
 
 ### 无障碍
 
-传统上,拖放交互一直是鼠标或触摸交互. 这个库支持拖放交互**只使用键盘**. 这使高级用户可以完全从键盘上获得他们的体验. 以及向以前被排除在外的用户开放这些体验. 
+传统上,拖放交互一直是鼠标或触摸交互. 这个库支持拖放交互 **只使用键盘**. 这使高级用户可以完全从键盘上获得他们的体验. 以及向以前被排除在外的用户开放这些体验. 
 
-我们提供**对屏幕阅读器的精彩支持**帮助视觉 (或其他) 损伤的用户. 我们随机附带英文短信📦. 但是,欢迎您使用. 覆盖这些消息`announce`它提供给所有的函数`DragDropContext > hook`功能. 
+我们提供 **对屏幕阅读器的精彩支持**帮助视觉 (或其他) 损伤的用户. 我们随机附带英文短信📦. 但是,欢迎您使用`announce`函数覆盖这些消息, 函数提供给所有的函数`DragDropContext > hook`功能. 
 
 见我们的[屏幕阅读器指南](docs/guides/screen-reader.md)为指导制作有用的屏幕阅读器信息. 
 
@@ -351,9 +351,9 @@
 
 ### 马虎点击并点击预防🐱🎁
 
-当用户在元素上按下鼠标时,我们无法确定用户是在点击还是在拖动. 另外,有时当用户点击时,他们可以稍微移动光标 - 一个马虎的点击. 所以我们只有在用户用鼠标向下移动超过一定距离时才会开始拖拽 (拖拽阈值)  - 如果他们只是马上点击,它们会比他们更多. 如果没有超过拖拽阈值,则用户交互就像常规点击一样. 如果超过了拖拽阈值,则该交互将被分类为拖拽并且不会发生标准点击行为. 
+当用户在元素上按下鼠标时,我们无法确定用户是在点击还是在拖动. 另外,有时当用户点击时,他们可以稍微移动光标 - 一个马虎的点击. 所以我们只有在用户用鼠标向下移动 超过一定距离 时才会开始拖拽 (拖拽阈值)  - 如果他们只是马上点击,它们会比他们更多. 如果没有超过拖拽阈值,则用户交互就像常规点击一样. 如果超过了拖拽阈值,则该交互将被分类为 拖拽 并且不会发生 标准点击行为. 
 
-这允许消费者包装诸如锚的交互元素,并且以自然的方式使其既是标准锚也是可拖动项. 
+这允许消费者包装诸如目标的交互元素,并且以自然的方式使其既是标准目标也是可拖动项. 
 
  (🐱🎁是一个[薛定谔的猫](https://www.youtube.com/watch?v=IOYyCHGWJq4)玩笑) 
 
@@ -361,16 +361,16 @@
 
 ### 键盘快捷键: 鼠标拖动
 
-当一个拖动**没有发生** `react-beautiful-dnd`不会影响任何标准键盘交互 (它没有绑定的监听器) . 
+当一个拖动 **没有发生** `react-beautiful-dnd`不会影响任何标准键盘交互 (它没有绑定的监听器) . 
 
-当一个拖动**正在发生**与*老鼠*用户可以执行以下键盘快捷键: 
+当一个拖动 **正在发生**与*鼠标*用户可以执行以下键盘快捷键: 
 
--   **逃逸** <kbd>退出</kbd>- 取消拖动
+-   **逃逸** <kbd>esc</kbd>- 取消拖动
 
 在鼠标拖动过程中,以下标准键盘事件被阻止,以防止出现不好的体验: 
 
--   **标签** <kbd>标签↹</kbd>- 防止绊倒
--   **输入** <kbd>⏎</kbd>- 防止提交
+-   **tab** <kbd>tab ↹</kbd>- 防止绊倒
+-   **enter** <kbd>⏎</kbd>- 防止提交
 
 除了这些明确禁止键盘事件外,所有标准键盘事件都应按预期工作. 
 
@@ -382,14 +382,14 @@
 
 ### 键盘快捷键: 键盘拖动
 
-当没有发生拖动时,用户将能够浏览`Draggable`在使用该标准的页面上**标签** <kbd>标签↹</kbd>通过可放置元素前进的关键和 (**转移**+**标签**)  (<kbd>转移</kbd>+) <kbd>标签↹</kbd>) 向后移动. 我们通过添加一个`tab-index`到了`Draggable`. 当一个`Draggable`已经集中了**空格键** <kbd>空间</kbd>将**电梯**一个`Draggable`. 这将开始拖动. 
+当在使用该标准的页面上没有发生拖动时,用户将能够通过 **tab** <kbd>tab↹</kbd>浏览`Draggable`可放置元素 前进和 (**shift**+**tab**)  (<kbd>shift</kbd>+) <kbd>tab↹</kbd>) 向后移动. 我们通过添加一个`tab-index`到了`Draggable`. 当一个`Draggable`已经触发了 **空格键** <kbd>space</kbd>, 将 **标记**一个`Draggable`. 这将开始拖动. 
 
 一旦开始拖动,可以使用以下键盘快捷键: 
 
--   **空格键** <kbd>空间</kbd>- 放下`Draggable`
--   **逃逸** <kbd>退出</kbd>- 取消拖动
+-   **空格键** <kbd>space</kbd>- 放下`Draggable`
+-   **逃逸** <kbd>esc</kbd>- 取消拖动
 
-以下命令也可用,但它们依赖于`type`的`Droppable`那个`Draggable`是*目前*在: 
+以下命令也可用,但它们依赖于*目前*的`Droppable`的`type`: 
 
 #### 在一个垂直列表中
 
@@ -407,8 +407,8 @@
 
 在拖动过程中,以下标准键盘事件的默认行为被阻止 (通过`event.preventDefault()`) 以避免不好的体验: 
 
--   **标签** <kbd>标签↹</kbd>- 防止绊倒
--   **输入** <kbd>⏎</kbd>- 防止提交
+-   **tab** <kbd>tab ↹</kbd>- 防止绊倒
+-   **enter** <kbd>⏎</kbd>- 防止提交
 
 ## 触摸拖动
 
@@ -418,19 +418,19 @@
 
 > 录制在iPhone 6s上
 
-### 理解意图: 点击,强制按下,滚动并拖动
+### 理解意图: 点击,强按,滚动并拖动
 
-当用户按下他们的手指 (或其他输入) 时`Draggable`我们不确定他们是否有意*龙头*,*强制按压*,*滚动容器*要么*拖动*. **越多越好`react-beautiful-dnd`旨在确保用户默认的交互体验不受影响**. 
+当用户按下他们的手指 (或其他输入) 时`Draggable`我们不确定他们是否有意*点击*,*强按*,*滚动容器*要么*拖动*. **越多越好`react-beautiful-dnd`旨在确保用户默认的交互体验不受影响**. 
 
 > 要查看更多关于我们如何影响标准浏览器事件的深入信息,请参阅我们的[我们如何使用DOM事件指南](docs/guides/how-we-use-dom-events.md)
 
 ### 开始拖动: 长按
 
-用户可以通过在一个元素上长时间握住手指start开始拖动🕑 (长按) 
+用户可以通过在一个元素上长时间握住手指开始拖动🕑 (长按) 
 
 ### 点按支持
 
-如果用户在定时器完成之前提起手指,然后我们将该事件释放给浏览器,以确定是否执行标准的点击/点击操作. 这可以让你有一个`Draggable`这既是可点击的,例如锚点以及可拖动的. 如果该项目被拖动,那么我们会阻止点击操作的发生. 
+如果用户在定时器完成之前提起手指,然后我们将该事件释放给浏览器,以确定是否执行标准的点击/点击操作. 这可以让你有一个`Draggable`这既是可点击的,例如目标点以及可拖动的. 如果该项目被拖动,那么我们会阻止点击操作的发生. 
 
 ### 原生滚动支持
 
@@ -441,15 +441,15 @@
 
 ### 强制按压支持
 
-> 只有Safari
+> 只有 Safari
 
-如果用户在移动元素之前按下元素 (即使拖动已经开始) ,则拖动被取消并且发生标准的力按压操作. 对于一个锚点,这是一个网站预览. 
+如果用户在移动元素之前按下元素 (即使拖动已经开始) ,则拖动被取消并且发生标准的力按压操作. 对于一个目标点,这是一个网站预览. 
 
 ### 振动
 
 > 这只是一个想法 - 如果你想要这种行为,你可以添加它. 
 
-如果你喜欢,你也可以触发一个[振动事件](https://developer.mozilla.org/en-US/docs/Web/API/Vibration*API)当用户拿起一个`Draggable`. 这可以提供用户正在做的事情的触觉反馈. 目前仅在Android版Chrome中支持. 
+如果你喜欢,你也可以触发一个[振动事件](https://developer.mozilla.org/en-US/docs/Web/API/Vibration*API)当用户拿起一个`Draggable`. 这可以提供用户正在做的事情的触觉反馈. 目前仅在 Android版Chrome 中支持. 
 
 ```js
 class App extends React.Component {
@@ -471,7 +471,7 @@ class App extends React.Component {
 
 ## 预设样式
 
-我们应用了许多不可见的样式来促进拖拽体验. 我们使用造型目标和技术的组合来做到这一点. 图书馆的目标是提供无选择的造型. 但是,我们确实应用了一些合理的`cursor`默认情况下在拖动控制上创建样式. 这是为了使图书馆尽可能简单地工作而设计的. 如果你想使用你自己的游标,你是不是欢迎. 您所需要做的就是通过使用规则来覆盖光标样式规则[特异性更高](https://css-tricks.com/specifics-on-css-specificity/). 
+我们应用了许多不可见的样式来促进拖拽体验. 我们使用 style 目标和技术的组合来做到这一点. 库的目标是提供 无选择的造型. 但是,我们确实在`默认情况下应用了一些合理的`cursor`拖动控制样式. 这是为了使 库 尽可能简单地工作而设计的. 如果你想使用你自己的鼠标样式,你是不是欢迎. 您所需要做的就是通过使用规则来覆盖 光标 样式规则[高定义性](https://css-tricks.com/specifics-on-css-specificity/). 
 
 以下是在拖动生命周期中的各个点上应用的样式: 
 
@@ -481,19 +481,19 @@ class App extends React.Component {
 
 样式适用于: **拖动控制元素**使用`data-react-beautiful-dnd-drag-handle`属性. 
 
-长按锚点通常会弹出一个内容菜单,其中包含链接选项,例如"在新标签中打开". 由于长按是用来开始拖动,我们需要退出此行为
+长按目标点通常会弹出一个内容菜单,其中包含链接选项,例如"在新标签中打开". 由于长按是用来开始拖动,我们需要退出此行为
 
 ```css
 -webkit-touch-callout: none;
 ```
 
-基于Webkit的浏览器在锚点处于活动状态时为其添加灰色叠加层. 我们删除了这个龙头叠加层,因为它会让用户感到困惑. [更多信息](https://css-tricks.com/snippets/css/remove-gray-highlight-when-tapping-links-in-mobile-safari/). 
+基于 Webkit 的浏览器在目标点处于活动状态时, 为其添加灰色叠加层. 我们删除了这个点按叠加层,因为它会让用户感到困惑. [更多信息](https://css-tricks.com/snippets/css/remove-gray-highlight-when-tapping-links-in-mobile-safari/). 
 
 ```css
 -webkit-tap-highlight-color: rgba(0,0,0,0);
 ```
 
-避免这种情况*拉动以刷新行动*和*延迟锚定焦点*在Android Chrome上
+避免情况*拉动以刷新行动*和*延迟目标定焦点*在Android Chrome上
 
 ```css
 touch-action: manipulation;
@@ -503,7 +503,7 @@ touch-action: manipulation;
 
 样式适用于: **droppable元素**使用`data-react-beautiful-dnd-droppable`属性. 
 
-当浏览器功能试图保持滚动位置,当DOM变化超过折叠时,选择退出. 我们已经正确地保持滚动位置. 自动`overflow-anchor`行为导致错误的滚动定位后删除. 
+当浏览器功能试图保持滚动位置,当DOM变化超过边缘时,选择退出. 我们已经正确地保持滚动位置. 自动`overflow-anchor`行为导致错误的滚动定位后放下. 
 
 ```css
 overflow-anchor: none;
@@ -527,7 +527,7 @@ cursor: grab;
 
 **使用该样式应用的样式`data-react-beautiful-dnd-drag-handle`属性**
 
-避免处理的优化`pointer-events`拖动时. 还用于允许通过带轨迹板或鼠标滚轮的拖动控制进行滚动. 
+拖动时避免处理的优化`pointer-events`. 还用于允许滚动通过拖动控制带轨迹板或鼠标滚轮. 
 
 ```css
 pointer-events: none;
@@ -567,7 +567,7 @@ user-select: none;
 
 **使用该样式应用的样式`data-react-beautiful-dnd-drag-handle`属性**
 
-我们将抓取光标应用于除拖动控制之外的所有拖动控制`Draggable`. 此时用户可以拖动其他`Draggable`如果他们喜欢的话. 
+我们将 抓取光标应用于所有拖动,除拖动控制`Draggable`之外的. 此时用户可以拖动其他`Draggable`如果他们喜欢的话. 
 
 ```css
 cursor: grab;
@@ -585,7 +585,7 @@ cursor: grab;
 
 ### 预设样式是供应商的前缀
 
-所有应用的样式都是供应商正确的前缀以符合我们的要求[支持浏览器矩阵](https://confluence.atlassian.com/cloud/supported-browsers-744721663.html). 这是手工完成的,以避免通过包含一个css-in-js库来增加react-beautiful-dnd的大小
+所有应用的样式都是供应商正确的前缀,以符合我们的要求[支持浏览器矩阵](https://confluence.atlassian.com/cloud/supported-browsers-744721663.html). 这是手工完成的,以避免通过包含一个 css-in-js 库来增加 react-beautiful-dnd 的大小
 
 ## 安装
 
@@ -601,14 +601,14 @@ npm install react-beautiful-dnd --save
 
 ### 分发包
 
-一个[通用模块定义](https://github.com/umdjs/umd)捆绑发布于`npm`在下面`/dist`消耗文件夹. 我们发布以下文件: 
+一个[通用模块 umd 定义](https://github.com/umdjs/umd)捆绑发布于`npm`在下面`/dist`文件夹. 我们发布以下文件: 
 
 -   `dist/react-beautiful-dnd.js`
 -   `dist/react-beautiful-dnd.min.js` (缩小束) 
 
-这些捆绑列表`react`作为需要提供的外部. 这样做是为了减少捆绑包的大小并防止消费者加载`react`多次. 你可以提供`react`通过你的模块系统或简单地通过拥有`react`上`window`. 
+这`react`捆绑列表作为需要提供的外部. 这样做是为了减少捆绑包的大小并防止消费者加载`react`多次. 你可以提供`react`通过你的模块系统 或 简单地通过`window`拥有`react`. 
 
-您可以使用UMD运行`react-beautiful-dnd`直接在浏览器中. 
+您可以使用 umd 运行`react-beautiful-dnd`直接在浏览器中. 
 
 ```html
 <!-- peer dependency -->
@@ -636,11 +636,11 @@ npm install react-beautiful-dnd --save
 
 ## [`ClojureScript`](https://clojurescript.org/)
 
-你可以消耗`react-beautiful-dnd`从内部`ClojureScript`运用[CLJSJS](https://cljsjs.github.io/)!
+你可以构建`react-beautiful-dnd`使用内部`ClojureScript`[CLJSJS](https://cljsjs.github.io/)!
 
 ## API
 
-好吧,进入有趣的东西 - 那么你如何使用图书馆?
+好吧,进入有趣的东西 - 那么你如何使用 库 ?
 
 ## `DragDropContext`
 
@@ -814,7 +814,7 @@ type DropReason = 'DROP' | 'CANCEL';
 
 ### 同步重新排序
 
-因为这个图书馆不能控制你的状态,所以你可以这样做*同步*重新排列你的名单基于`result: DropResult`. 
+因为这个 库 不能控制你的状态,所以你可以这样做*同步*重新排列你的名单基于`result: DropResult`. 
 
 #### 这是你需要做的
 
@@ -857,7 +857,7 @@ type DropReason = 'DROP' | 'CANCEL';
 
 ### `onDragStart`和`onDragEnd`配对
 
-我们非常努力地确保每一个`onDragStart`事件与单一配对`onDragEnd`事件. 但是,在这种情况下可能会出现流氓情况. 如果发生这种情况 - 这是一个错误. 目前没有任何机制可以告诉图书馆从外部取消当前的拖拽. 
+我们非常努力地确保每一个`onDragStart`事件与单一配对`onDragEnd`事件. 但是,在这种情况下可能会出现流氓情况. 如果发生这种情况 - 这是一个错误. 目前没有任何机制可以告诉 库 从外部取消当前的拖拽. 
 
 ## `Droppable`
 
@@ -922,7 +922,7 @@ type DroppableProps = {|
 > 看我们的`innerRef`运用[指南`innerRef`: 这用于在中创建空间](/docs/patterns/using-inner-ref.md)
 
 -   `provided.placeholder`根据需要拖动. `Droppable`当用户拖动不是主列表的列表时,需要此空间. 请确保将占位符放在您为其提供参考的组件中. 我们需要增加大小本身. `Droppable`: 这是一个Object,它包含需要应用于Droppable元素的属性. 
--   `provided.droppableProps (DroppableProps)`它需要应用于您应用的相同元素至. `provided.innerRef`它目前包含一个属性,我们用它来控制一些不可见的CSS. `data`
+-   `provided.droppableProps (DroppableProps)`它需要应用于您应用的相同元素至. `provided.innerRef`它目前包含一个属性,我们用它来控制一些不可见的CSS. `dat一个`
 
 ```js
 <Droppable droppableId="droppable-1">
@@ -969,7 +969,7 @@ type DroppableStateSnapshot = {|
 
 ### 有条件地放下
 
--   `Droppable`s只能通过那些共享相同的人`Droppable`. `Draggable`这是允许有条件丢弃的一种简单方法. `type`如果你不提供一个`type`为了`Droppable`,那么它只会接受`Draggable`s也有默认的类型. `Draggable`s和`Droppable`两个人都会有他们的`types`设置`'DEFAULT'`当没有提供. 目前没有办法设置多个`types`或者a`type`通配符,将接受`Draggable`s的多种任何类型. 如果有一个有效的用例,可以添加它. 
+-   `Droppable`s只能通过那些共享相同的人`Droppable`. `Draggable`这是允许有条件丢弃的一种简单方法. `type`如果你不提供一个`type`为了`Droppable`,那么它只会接受`Draggable`s也有默认的类型. `Draggable`s和`Droppable`两个人都会有他们的`types`设置`'DEFAULT'`当没有提供. 目前没有办法设置多个`types`或者一个`type`通配符,将接受`Draggable`s的多种任何类型. 如果有一个有效的用例,可以添加它. 
 -   使用`isDropDisabled`你可以有条件地允许掉落. 这使您可以执行任意复杂的条件转换. 这只会被视为如果`type`的`Droppable`匹配`type`当前正在拖动`Draggable`. 
 -   您可以禁用放弃`Droppable`总是由总设定`isDropDisabled`至`true`. 你可以这样做来创建一个永远不能被拖放但包含的列表`Draggable`秒. 
 -   技术上你不需要使用`type`并用你的所有条件放置逻辑来完成`isDropDisabled`功能. 该`type`参数是常见用例的便捷捷径. 
@@ -985,11 +985,11 @@ type DroppableStateSnapshot = {|
 
 ### 空`Droppable`
 
-建议你把一个`min-height`在垂直`Droppable`或者a`min-width`在水平`Droppable`. 否则当`Droppable`是空的可能没有足够的目标`Draggable`被触摸或鼠标输入拖动*过度*该`Droppable`. 
+建议你把一个`min-height`在垂直`Droppable`或者一个`min-width`在水平`Droppable`. 否则当`Droppable`是空的可能没有足够的目标`Draggable`被触摸或鼠标输入拖动*过度*该`Droppable`. 
 
 ### 推荐Droppable性能优化
 
-当用户拖拉或停止拖动时,a`Droppable`我们重新渲染`Droppable`与更新`DroppableStateSnapshot > isDraggingOver`值. 这对于设计样式非常有用`Droppable`. 但是,默认情况下,这将导致所有的孩子的渲染`Droppable`- 可能是100的`Draggable`的!这可能导致明显的帧速放下. 为了避免这个问题,我们建议您创建一个组件,它是一个子组件`Droppable`谁的责任是避免渲染儿童,如果不是必需的话. 
+当用户拖拉或停止拖动时,一个`Droppable`我们重新渲染`Droppable`与更新`DroppableStateSnapshot > isDraggingOver`值. 这对于设计样式非常有用`Droppable`. 但是,默认情况下,这将导致所有的孩子的渲染`Droppable`- 可能是100的`Draggable`的!这可能导致明显的帧速放下. 为了避免这个问题,我们建议您创建一个组件,它是一个子组件`Droppable`谁的责任是避免渲染儿童,如果不是必需的话. 
 
 以下是你如何做到这一点的例子: 
 
@@ -1040,13 +1040,13 @@ class Students extends Component {
 }
 ```
 
-通过使用该方法,您可以将样式更改为a`Droppable`当它被拖动时,但你避免不必要地重新渲染所有的孩子. 请记住,如果你正在使用`React.PureComponent`你的组件会[对上下文中的变化没有反应](https://github.com/facebook/react/issues/2517). 
+通过使用该方法,您可以将样式更改为一个`Droppable`当它被拖动时,但你避免不必要地重新渲染所有的孩子. 请记住,如果你正在使用`React.PureComponent`你的组件会[对上下文中的变化没有反应](https://github.com/facebook/react/issues/2517). 
 
 不幸的是我们[无法为您应用此优化](https://medium.com/merrickchristensen/function-as-child-components-5f3920a9ace9). 它是使用函数作为子模式的副产品. 
 
 ## `Draggable`
 
-`Draggable`组件可以拖动并拖放到其上`Droppable`秒. 一个`Draggable`必须始终包含在一个`Droppable`. 它是**可能**重新排序`Draggable`在其家中`Droppable`或移动到另一个`Droppable`. 它是**可能**因为a`Droppable`可以自由地控制它允许投入的内容. 
+`Draggable`组件可以拖动并拖放到其上`Droppable`秒. 一个`Draggable`必须始终包含在一个`Droppable`. 它是**可能**重新排序`Draggable`在其家中`Droppable`或移动到另一个`Droppable`. 它是**可能**因为一个`Droppable`可以自由地控制它允许投入的内容. 
 
 一切`Draggable`有一个*拖动控制*. 一个*拖动控制*是用户为了拖动而与之交互的元素`Draggable`. 一个*拖动控制*可以是`Draggable`元素本身,还是孩子的`Draggable`. 
 
@@ -1133,7 +1133,7 @@ type DraggableProvided = {|
 </Draggable>;
 ```
 
--   `provided.draggableProps (DraggableProps)`这是一个包含a的对象属性和内联`data`. `style`此对象需要应用于您应用的同一节点至. `provided.innerRef`这将控制可拖动的拖动操作,而不是拖动拖动操作. 欢迎您将自己的样式添加到- 但请不要移除或替换任何属性. `DraggableProps.style`类型信息
+-   `provided.draggableProps (DraggableProps)`这是一个包含a的对象属性和内联`dat一个`. `style`此对象需要应用于您应用的同一节点至. `provided.innerRef`这将控制可拖动的拖动操作,而不是拖动拖动操作. 欢迎您将自己的样式添加到- 但请不要移除或替换任何属性. `DraggableProps.style`类型信息
 
 ##### `draggableProps` 类型信息
 
@@ -1182,7 +1182,7 @@ type NotDraggingStyle = {|
 
 它是该库的一个合约,它拥有拖动元素的定位逻辑. 
 
-这包括诸如`top`,`right`,`bottom`,`left`和`transform`. 图书馆可能会改变它如何定位事物以及它使用的是哪些属性,而不会执行主要的版本冲突. 也建议你不要使用你自己的`transition`属性添加到拖动元素. 
+这包括诸如`top`,`right`,`bottom`,`left`和`transform`.  库 可能会改变它如何定位事物以及它使用的是哪些属性,而不会执行主要的版本冲突. 也建议你不要使用你自己的`transition`属性添加到拖动元素. 
 
 ##### 警告: `position: fixed`
 
@@ -1412,7 +1412,7 @@ type DraggableStateSnapshot = {|
 
 -   `input`
 -   `button`
--   `textarea`
+-   `textare一个`
 -   `select`
 -   `option`
 -   `optgroup`
@@ -1574,7 +1574,7 @@ import type { DroppableProvided } from 'react-beautiful-dnd';
 
 ## 尺寸
 
-已经非常谨慎地保持图书馆尽可能轻. 这是目前**〜38kb (gzip) **在尺寸方面. 如果您已经在使用某个基础依赖关系,那么净成本可能会更低. 
+已经非常谨慎地保持 库 尽可能轻. 这是目前**〜38kb (gzip) **在尺寸方面. 如果您已经在使用某个基础依赖关系,那么净成本可能会更低. 
 
 ## 支持的浏览器
 
