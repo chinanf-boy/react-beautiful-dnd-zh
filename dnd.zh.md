@@ -1,9 +1,18 @@
 
 ![react beautiful dnd](https://raw.githubusercontent.com/alexreardon/files/master/resources/react-beautiful-dnd-logo.png)
 
+# react-beautiful-dnd
+
+ [`React.js`](https://facebook.github.io/react/) 美丽,无障碍的列表拖放库
+
+[![Build Status](https://travis-ci.org/atlassian/react-beautiful-dnd.svg?branch=master)](https://travis-ci.org/atlassian/react-beautiful-dnd) [![npm](https://img.shields.io/npm/v/react-beautiful-dnd.svg)](https://www.npmjs.com/package/react-beautiful-dnd) [![dependencies](https://david-dm.org/atlassian/react-beautiful-dnd.svg)](https://david-dm.org/atlassian/react-beautiful-dnd) [![Greenkeeper badge](https://badges.greenkeeper.io/atlassian/react-beautiful-dnd.svg)](https://greenkeeper.io/) [![SemVer](https://img.shields.io/badge/SemVer-2.0.0-brightgreen.svg)](http://semver.org/spec/v2.0.0.html)
+
+![quote application example](https://raw.githubusercontent.com/alexreardon/files/master/resources/website-board.gif?raw=true)
+
+
 <details>
 
-<summary> ❤️ 文档目录 ❤️</summary>
+<summary> <strong> ❤️ react-beautiful-dnd 文档目录 ❤️</strong> </summary>
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -146,13 +155,6 @@
 
 </details>
 
-# react-beautiful-dnd
-
-美丽,可访问的拖放列表与[`React.js`](https://facebook.github.io/react/)
-
-[![Build Status](https://travis-ci.org/atlassian/react-beautiful-dnd.svg?branch=master)](https://travis-ci.org/atlassian/react-beautiful-dnd) [![npm](https://img.shields.io/npm/v/react-beautiful-dnd.svg)](https://www.npmjs.com/package/react-beautiful-dnd) [![dependencies](https://david-dm.org/atlassian/react-beautiful-dnd.svg)](https://david-dm.org/atlassian/react-beautiful-dnd) [![Greenkeeper badge](https://badges.greenkeeper.io/atlassian/react-beautiful-dnd.svg)](https://greenkeeper.io/) [![SemVer](https://img.shields.io/badge/SemVer-2.0.0-brightgreen.svg)](http://semver.org/spec/v2.0.0.html)
-
-![quote application example](https://raw.githubusercontent.com/alexreardon/files/master/resources/website-board.gif?raw=true)
 
 ## 例子🎉
 
@@ -165,9 +167,9 @@
 ### 在手机或平板电脑上查看
 
 -   [简单的列表](https://react-beautiful-dnd.netlify.com/iframe.html)
--   [板](https://react-beautiful-dnd.netlify.com/iframe.html?selectedKind=board&selectedStory=simple)- 最好在风景中观看
+-   [排板](https://react-beautiful-dnd.netlify.com/iframe.html?selectedKind=board&selectedStory=simple)- 最好在风景中观看
 
-> 目前,我们为触摸设备提供不同的链接[故事书](https://github.com/storybooks/storybook)没有很好的移动菜单体验[更多信息](https://github.com/storybooks/storybook/issues/124)
+> 目前,我们为触摸设备提供不同的[故事书{storybook}](https://github.com/storybooks/storybook)链接,但没有很好的移动菜单体验[更多信息](https://github.com/storybooks/storybook/issues/124)
 
 ## 基本使用示例
 
@@ -175,7 +177,7 @@
 
 -   [简单的垂直列表](https://codesandbox.io/s/k260nyxq9v)
 -   [简单的水平列表](https://codesandbox.io/s/mmrp44okvj)
--   [两个列表之间的简单DnD](https://codesandbox.io/s/l7ro2231o7)
+-   [两个列表之间的简单 DnD「drag and drop」](https://codesandbox.io/s/l7ro2231o7)
 
 > 即将推出: 获取入门指南!
 
@@ -183,39 +185,39 @@
 
 我们在发行说明中创建了升级说明,以帮助您升级到最新版本!
 
--   [从...升级`6.x`至`7.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v7.0.0)
--   [从...升级`5.x`至`6.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v6.0.0)
--   [从...升级`4.x`至`5.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v5.0.0)
--   [从...升级`3.x`至`4.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v4.0.0)
+-   [从`6.x`升级到`7.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v7.0.0)
+-   [从`5.x`升级到`6.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v6.0.0)
+-   [从`4.x`升级到`5.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v5.0.0)
+-   [从`3.x`升级到`4.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v4.0.0)
 
 ## 核心特点
 
 -   美丽,自然的物品移动
--   清洁且功能强大的api简单易用
+-   简洁且功能强大的api快速开始
 -   与标准浏览器交互非常好
--   Unopinionated样式
--   没有创建额外的包装DOM节点 -  flexbox和焦点管理友好!
+-   Unopinionated 「没有固执己见」样式
+-   没有创建额外的包装DOM节点 -  flexbox 和 焦点{focus} 管理友好!
 -   无障碍
 
 ## 目前支持的功能集
 
--   垂直列表↕
--   水平列表↔
--   列表之间的移动 (▤↔▤) 
--   鼠标🐭,键盘🎹和触摸👉📱 (手机,平板电脑等) 支持
--   自动滚动 - 在拖动过程中根据需要自动滚动容器和窗口 (即使使用键盘🔥) 
+-   垂直列表 ↕
+-   水平列表 ↔
+-   列表之间的移动 (▤ ↔ ▤) 
+-   鼠标 🐭,键盘 🎹 和触摸 👉📱 (手机,平板电脑等) 支持
+-   自动滚动 - 在拖动过程中根据需要自动滚动容器和窗口 (即使是使用键盘🔥) 
 -   [多拖动支持](/docs/patterns/multi-drag.md)
 -   令人难以置信的屏幕阅读器支持 - 我们为开箱即用的英文屏幕阅读器提供了惊人的体验. 我们还为需要它的人提供完整的定制控制和国际化支持
--   条件[拖延](https://github.com/atlassian/react-beautiful-dnd#props-1)和[落下](https://github.com/atlassian/react-beautiful-dnd#conditionally-dropping)
+-   [拖动](https://github.com/atlassian/react-beautiful-dnd#props-1)和[放下](https://github.com/atlassian/react-beautiful-dnd#conditionally-dropping)条件
 -   在一个页面上有多个独立的列表
 -   灵活的项目大小 - 可拖动的项目可以有不同的高度 (垂直列表) 或宽度 (水平列表) 
--   与语义表重新排序兼容 -[表格模式](/docs/patterns/tables.md)
--   与...兼容[`React.Portal`](https://reactjs.org/docs/portals.html)-[门户模式](/docs/patterns/using-a-portal.md)
+-   兼容 semantic 表重新排序 -[表格模式](/docs/patterns/tables.md)
+-   兼容[`React.Portal`](https://reactjs.org/docs/portals.html)-[门户模式「portal pattern」](/docs/patterns/using-a-portal.md)
 -   自定义拖动控制 - 您可以通过拖动整个项目的一部分
 -   一个`Droppable`列表可以是滚动容器 (没有可滚动的父项) 或者是滚动容器的子项 (也没有可滚动的父项) 
 -   独立的嵌套列表 - 列表可以是另一个列表的子项,但不能将项目从父列表拖到子列表中
 -   服务器端渲染兼容
--   和...一起玩[嵌套的交互式元素](https://github.com/atlassian/react-beautiful-dnd#interactive-child-elements-within-a-draggable)默认
+-   默认与[嵌套的交互式元素](https://github.com/atlassian/react-beautiful-dnd#interactive-child-elements-within-a-draggable)兼容
 
 ### 更多即将推出
 
@@ -223,47 +225,47 @@
 
 ## 并不适合所有人
 
-有很多库允许React中的拖放交互. 其中最值得注意的是惊人的[`react-dnd`](https://github.com/react-dnd/react-dnd). 它提供了一套非常出色的拖放原语,这些原语在特定情况下非常适用[疯狂地不一致](https://www.quirksmode.org/blog/archives/2009/09/the_html5_drag.html)html5拖放功能. `react-beautiful-dnd` **是为垂直和水平列表专门构建的更高级别的抽象**. 在该功能的子集内`react-beautiful-dnd`提供强大,自然和美丽的拖放体验. 但是,它没有提供react-dnd提供的广泛功能. 所以这个库可能不适合你,这取决于你的用例是什么. 
+有很多库允许React中的拖放交互. 其中最值得注意的是惊人的[`react-dnd`](https://github.com/react-dnd/react-dnd). 它提供了一套非常出色的拖放函数,这些函数在特定情况下非常适用[疯狂地不一致](https://www.quirksmode.org/blog/archives/2009/09/the_html5_drag.html)的html5拖放功能. `react-beautiful-dnd` **是为垂直和水平列表专门构建的更高级别的抽象**. 在该功能的子集内`react-beautiful-dnd`提供强大,自然和美丽的拖放体验. 但是,它没有提供 react-dnd 提供的广泛功能. 所以这个库可能不适合你,这取决于你的用例是什么. 
 
 ## 驾驶理念: 物理性
 
-核心设计理念`react-beautiful-dnd`是物质性的: 我们希望用户感觉他们正在移动物体
+核心设计理念`react-beautiful-dnd`是物理性的: 我们希望用户感觉他们正在移动物体
 
 ### 应用1: 没有即时移动
 
-这是一个相当标准的拖放模式,用于响应用户拖动而消失并重新出现的东西. 对于更自然的拖动,我们为物品的移动设置动画,因为它们需要在拖动时偏移以更清晰地显示拖动效果. 我们还制作了一件物品的下落,以便将其移动到新的位置. 在任何时候,物品都不会随时随地移动 - 无论它是否在拖动. 
+这是一个相当标准的拖放模式,用于响应用户拖动而消失并重新出现的东西. 对于更自然的拖动,我们为物品的移动设置动画,因为它们需要在拖动时`偏移`以更清晰地显示拖动效果. 我们还制作了一件物品的下落动画,以便将其移动到新的位置. 在任何时候,无论它是否在拖动, 物品都不会随时随地移动. 
 
 ### 应用2: 知道何时移动
 
-拖放交互基于用户开始拖动的位置很常见. 
+常见用法: 拖放交互基于用户开始拖动的位置. 
 
-在`react-beautiful-dnd`拖动物品的影响是基于其重心 - 无论用户从哪里抓取物品. 拖动项目的影响遵循类似的规则a️. 以下是一些遵循的规则,即使对于灵活高度的物品也可以实现自然的拖拽体验: 
+在`react-beautiful-dnd`拖动物品的影响是基于其重心 - 无论用户从哪里抓取物品. 拖动项目的影响遵循 类似的规则 ⚖️. 以下是一些遵循的规则,即使对于灵活高度的物品也可以实现自然的拖拽体验: 
 
--   列表是*拖过去*当拖动项目的中心位置越过列表的边界之一时
--   当拖动物品的中心位置越过休息物品的边缘时,休息拖动物品将移出拖动物品的路线. 换句话说: 一旦物品 (A) 的中心位置越过另一物品 (B) 的边缘,B就会移开. 
+-   当拖动物品的中心位置越过列表的边界之一时, 列表是*拖过去*
+-   当拖动物品的中心位置越过`休息{没拖着}`物品的边缘时,没拖动物品将移出拖动物品的路线. 换句话说: 一旦物品 (A) 的中心位置越过另一物品 (B) 的边缘,B就会移开. 
 
 ### 应用3: 没有阴影
 
-在物品及其目的地四处移动的环境中,阴影很有用. 但是,与`react-beautiful-dnd`根据物品的移动情况,物品的放置位置应该很明显. 这可能会在未来发生变化 - 但实验是要看看我们能够在没有任何这些可供选择的情况下获得多少. 
+在物品及其目的地四处移动的环境中,阴影很有用. 但是,与`react-beautiful-dnd`根据物品的移动情况, 物品的放置位置应该很明显. 这可能会在未来发生变化 - 这一点上是要看看接下来, 我们在没有任何这些可供选择的情况下能够获得多少. 
 
 ### 应用4: 最大化交互性
 
-`react-beautiful-dnd`真的很难避免尽可能多的非互动性阶段. 用户应该觉得他们在控制界面,而不是等待动画完成,然后才能继续与界面交互. 然而,为了让每个人的生活更加健康,在正确性和权力之间需要做出平衡. 以下是有些事情不具有互动性的唯一情况: 
+`react-beautiful-dnd`真的很难避免尽可能多的非互动性阶段. 用户应该觉得他们在控制界面,而不是等待动画完成,然后才能继续与界面交互. 然而,为了让每个人的生活更加健康,在 正确性和权力 之间需要做出平衡. 以下是有些事情不具有互动性的唯一情况: 
 
-1.  从用户取消拖动到拖放动画完成时. 取消时有很多事情要回到他们应该在的地方. 如果您在不是真正的家的位置抓取物品,则以下拖动将不正确. 
-2.  开始拖动动画自己放置的项目. 为了简单起见,情况就是这样 - 在家动画的时候实际上很难抢东西. 它可以被编码 - 但它似乎是一个边缘案例,会增加很多复杂性. 
+1.  从用户取消拖动到拖放动画完成时. 取消时有很多事情要回到他们应该在的地方. 如果您在不是 真正的家的`位置` 抓取物品,则拖动将不正确. 
+2.  真正拖动物品后就开始动画了. 为了简单起见,情况就是这样 - 在实际动画的期间上很难再抓东西. 它可以被编码 - 但它似乎是一个边缘案例,会增加很多复杂性. 
 
 请记住,这些不活动时间可能并不总是存在. 
 
 ### 应用5: 无拖动轴锁定
 
-目前,库不支持拖动轴锁定 (又名拖轨) . 这是用户被限制在只沿一个轴拖动的地方. 目前的想法是,这打破了我们正在寻找的物理隐喻,并向用户发送一条消息,即他们正在与一个软件进行交互,而不是移动物理对象. 可以确保用户只能通过使用 Props 放入单个列表中`type`和`isDropDisabled`. 您也可以对列表进行一些视觉处理`onDragStart`向用户显示这是他们唯一可以与之互动的地方. 
+目前,库不支持拖动轴锁定 (又名拖轨) . 这是用户被限制在只沿一个轴拖动的地方. 目前的想法是,这打破了我们正在寻找的物理隐喻,并向用户发送一条消息,即他们正在与一个软件进行交互,而不是移动物理对象. 可以确保用户只能通过使用 Props 放入单个列表中`type`和`isDropDisabled`. 您也可以对列表进行一些视觉处理到`onDragStart`函数,这是唯一的用户显示他们互动的地方. 
 
 ### 应用6: 自然交叉表移动
 
-而不是使用基于索引的方法在列表之间移动键盘,`react-beautiful-dnd`基于. 执行交叉表移动**惯性,重力和碰撞**. 您可以通过阅读博客了解更多关于这是如何工作的["列表之间的自然键盘移动"](https://medium.com/@alexandereardon/friction-gravity-and-collisions-3adac3a94e19). 
+比起使用基于索引的方法在列表之间移动键盘,`react-beautiful-dnd`更倾向于执行交叉表移动 **惯性,重力和碰撞**. 您可以通过阅读博客了解更多关于这是如何工作的["列表之间的自然键盘移动"](https://medium.com/@alexandereardon/friction-gravity-and-collisions-3adac3a94e19). 
 
-![example](https://raw.githubusercontent.com/alexreardon/files/master/resources/collision.gif?raw=true)
+![例子🌰](https://raw.githubusercontent.com/alexreardon/files/master/resources/collision.gif?raw=true)
 
 ## 精心设计的动画
 
@@ -275,13 +277,13 @@
 
 ### 走出困境
 
-移出拖动项目的项目是通过CSS过渡而非物理过程来实现的. 这是通过允许GPU处理运动来最大化性能. CSS动画曲线的设计是为了避免沟通. 
+移出拖动项目的项目是通过 CSS过渡 而非物理过程来实现的. 这是通过允许 GPU处理运动来最大化性能. CSS动画曲线的设计是为了避免沟通. 
 
 它是如何组成的: 
 
 1.  一个模拟自然反应时间的热身期
 2.  一个小阶段,可以快速移除
-3.  长尾巴,以便人们可以阅读动画后半部分正在动画的任何文字
+3.  长尾巴,以便人们可以阅读 动画后半部分正在动画时 的任何文字
 
 ![animation curve](https://raw.githubusercontent.com/alexreardon/files/master/resources/dnd-ease-in-out-small.png?raw=true)
 
