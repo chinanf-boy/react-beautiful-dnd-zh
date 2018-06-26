@@ -6,27 +6,17 @@
 
 ---
 
-穷
+## 原文 readme.md commit 链接/日期
 
-<a href="https://patreon.com/yobrave">
-<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" height="30">
-</a>
+https://github.com/atlassian/react-beautiful-dnd/blob/cea1a62c0011f8560edf7935dc06cdfa71d51110/README.md
 
----
+日期 : 2018 6.21
 
 ## 中文翻译
 
 [中文 dnd.zh.md](./dnd.zh.md)
 
-<details>
-
-<summary> 原文-commit readme.md 链接 </summary>
-
-https://github.com/atlassian/react-beautiful-dnd/blob/cea1a62c0011f8560edf7935dc06cdfa71d51110/README.md
-
-</details>
-
-### 校对
+### 校对中
 
 - [ ] [react-beautiful-dnd](./dnd.zh.md#react-beautiful-dnd)
   - [ ] [例子🎉](./dnd.zh.md#%E4%BE%8B%E5%AD%90)
@@ -165,6 +155,14 @@ https://github.com/atlassian/react-beautiful-dnd/blob/cea1a62c0011f8560edf7935dc
 ## 翻译
 
 - 使用[translate-mds](https://github.com/chinanf-boy/translate-mds) 完成初稿
+
+## 生活
+
+[help me live , live need money 💰](https://github.com/chinanf-boy/live-need-money)
+
+## More
+
+[更多其他中文翻译](https://github.com/chinanf-boy/chinese-translate-list)
 
 ## 欢迎
 
