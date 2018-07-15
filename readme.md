@@ -1,4 +1,9 @@
-# react-beautiful-dnd [![explain](http://llever.com/explain.svg)](https://github.com/chinanf-boy/Source-Explain)
+# react-beautiful-dnd [![explain]][source] [![translate-svg]][translate-list]
+
+[explain]: http://llever.com/explain.svg
+[source]: https://github.com/chinanf-boy/Source-Explain
+[translate-svg]: http://llever.com/translate.svg
+[translate-list]: https://github.com/chinanf-boy/chinese-translate-list
 
 「 `React.js` 漂亮,可移植性 列表拖拽库 」{翻译}
 
