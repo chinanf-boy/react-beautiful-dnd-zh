@@ -13,7 +13,7 @@
 
 https://github.com/atlassian/react-beautiful-dnd/blob/4fb9432999c92a55cc6c1549e94c565ce5668100/README.md#L3
 
-日期 : 2018 6.21
+日期 : 2018 8.1
 
 ### 翻译
 
