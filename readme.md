@@ -11,7 +11,7 @@
 
 ## 原文 readme.md commit 链接/日期
 
-https://github.com/atlassian/react-beautiful-dnd/blob/cea1a62c0011f8560edf7935dc06cdfa71d51110/README.md
+https://github.com/atlassian/react-beautiful-dnd/blob/4fb9432999c92a55cc6c1549e94c565ce5668100/README.md#L3
 
 日期 : 2018 6.21
 
@@ -19,9 +19,15 @@ https://github.com/atlassian/react-beautiful-dnd/blob/cea1a62c0011f8560edf7935dc
 
 - 使用[translate-mds](https://github.com/chinanf-boy/translate-mds) 完成初稿
 
-### 生活/More/欢迎
+### 生活/More
 
-[help me live , live need money 💰](https://github.com/chinanf-boy/live-need-money) | [更多其他中文翻译](https://github.com/chinanf-boy/chinese-translate-list) | 👏 `Issue` / 最好就直接 `Pull` 啦 😊
+[help me live , live need money 💰](https://github.com/chinanf-boy/live-need-money) | [更多其他中文翻译](https://github.com/chinanf-boy/chinese-translate-list) 
+
+### 贡献
+
+欢迎 👏 勘误/校对/更新贡献 😊 [具体贡献请看](https://github.com/chinanf-boy/chinese-translate-list#贡献)
+
+
 
 ---
 
@@ -32,7 +38,8 @@ https://github.com/atlassian/react-beautiful-dnd/blob/cea1a62c0011f8560edf7935dc
 
  [`React.js`](https://facebook.github.io/react/) 美丽,无障碍的列表拖放库
 
-[![Build Status](https://travis-ci.org/atlassian/react-beautiful-dnd.svg?branch=master)](https://travis-ci.org/atlassian/react-beautiful-dnd) [![npm](https://img.shields.io/npm/v/react-beautiful-dnd.svg)](https://www.npmjs.com/package/react-beautiful-dnd) [![dependencies](https://david-dm.org/atlassian/react-beautiful-dnd.svg)](https://david-dm.org/atlassian/react-beautiful-dnd) [![Greenkeeper badge](https://badges.greenkeeper.io/atlassian/react-beautiful-dnd.svg)](https://greenkeeper.io/) [![SemVer](https://img.shields.io/badge/SemVer-2.0.0-brightgreen.svg)](http://semver.org/spec/v2.0.0.html)
+[![CircleCI branch](https://img.shields.io/circleci/project/github/atlassian/react-beautiful-dnd/master.svg)](https://circleci.com/gh/atlassian/react-beautiful-dnd/tree/master)
+[![npm](https://img.shields.io/npm/v/react-beautiful-dnd.svg)](https://www.npmjs.com/package/react-beautiful-dnd) [![dependencies](https://david-dm.org/atlassian/react-beautiful-dnd.svg)](https://david-dm.org/atlassian/react-beautiful-dnd) [![Greenkeeper badge](https://badges.greenkeeper.io/atlassian/react-beautiful-dnd.svg)](https://greenkeeper.io/) [![SemVer](https://img.shields.io/badge/SemVer-2.0.0-brightgreen.svg)](http://semver.org/spec/v2.0.0.html)
 
 ![quote application example](https://raw.githubusercontent.com/alexreardon/files/master/resources/website-board.gif?raw=true)
 
@@ -213,17 +220,7 @@ https://github.com/atlassian/react-beautiful-dnd/blob/cea1a62c0011f8560edf7935dc
 - [![kr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png) **한글/Korean**](https://github.com/LeeHyungGeun/react-beautiful-dnd-kr)
  
 - [![china](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **中文/Chinese**](https://github.com/chinanf-boy/react-beautiful-dnd-zh)
- 
- 
 
-## 升级
-
-我们在发行说明中创建了升级说明,以帮助您升级到最新版本!
-
--   [从`6.x`升级到`7.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v7.0.0)
--   [从`5.x`升级到`6.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v6.0.0)
--   [从`4.x`升级到`5.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v5.0.0)
--   [从`3.x`升级到`4.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v4.0.0)
 
 ## 核心特点
 
@@ -233,6 +230,19 @@ https://github.com/atlassian/react-beautiful-dnd/blob/cea1a62c0011f8560edf7935dc
 -   Unopinionated 「没有固执己见」样式
 -   没有创建额外的包装DOM节点 -  flexbox 和 焦点{focus} 管理友好!
 -   无障碍
+
+## 来来来,入门 🤩
+
+我们 漂亮地创建了课程 [a free course on `egghead.io`](https://egghead.io/courses/beautiful-and-accessible-drag-and-drop-with-react-beautiful-dnd) 去帮助人们 尽可能快地入门 `react-beautiful-dnd` 
+
+![Course logo](https://user-images.githubusercontent.com/2182637/43372837-8c72d3f8-93e8-11e8-9d92-a82adde7718f.png)
+
+## Read this in other languages
+
+- [![kr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png) **한글/Korean**](https://github.com/LeeHyungGeun/react-beautiful-dnd-kr)
+
+- [![china](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **中文/Chinese**](https://github.com/chinanf-boy/react-beautiful-dnd-zh)
+
 
 ## 目前支持的功能集
 
@@ -257,6 +267,17 @@ https://github.com/atlassian/react-beautiful-dnd/blob/cea1a62c0011f8560edf7935dc
 ### 更多即将推出
 
 您可以查看即将登陆的所有功能[在我们的问题页面上](https://github.com/atlassian/react-beautiful-dnd/issues). 
+
+## 升级
+
+我们在发行说明中创建了升级说明,以帮助您升级到最新版本!
+
+- [从 `7.x` 到 `8.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v8.0.0)
+- [从 `6.x` 到 `7.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v7.0.0)
+- [从 `5.x` 到 `6.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v6.0.0)
+- [从 `4.x` 到 `5.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v5.0.0)
+- [从 `3.x` 到 `4.x`](https://github.com/atlassian/react-beautiful-dnd/releases/tag/v4.0.0)
+
 
 ## 并不适合所有人
 
@@ -1411,8 +1432,14 @@ const myOnMouseDown = event => console.log('mouse down on', event.target);
 
 ```js
 type DraggableStateSnapshot = {|
+  // 如果正在拖动Draggable，或者如果它是drop动画，则设置为true
+  // 主动拖动和拖放动画都被视为拖动的一部分
   isDragging: boolean,
-  // What Droppable (if any) the Draggable is currently over
+  // 如果Draggable是放置动画，则设置为true。 不是每次拖放互动
+  // 作为放置动画。 当Draggable已经进入最终掉落时的位置时，没有放置动画
+  //  使用键盘拖动时通常会出现这种情况
+  isDropAnimating: boolean,
+  // 拖动 Draggable 在确切覆盖 （如果有的话）着的Droppable id
   draggingOver: ?DroppableId,
 |};
 ```
@@ -1540,6 +1567,7 @@ type DraggableProvided = {|
 
 type DraggableStateSnapshot = {|
   isDragging: boolean,
+  isDropAnimating: boolean,
   draggingOver: ?DroppableId,
 |}
 
@@ -1556,7 +1584,6 @@ type DraggingStyle = {|
   pointerEvents: 'none',
   top: number,
   left: number,
-  margin: 0,
   transition: 'none',
   transform: ?string,
   zIndex: ZIndex,
@@ -1591,6 +1618,9 @@ import type { DroppableProvided } from 'react-beautiful-dnd';
 ##  Typescript
 
 如果你正在使用[Typescript](https://www.typescriptlang.org/)你可以使用社区维护[DefinitelyTyped 类型定义](https://www.npmjs.com/package/@types/react-beautiful-dnd). [安装说明](http://definitelytyped.org/). 
+
+这有些 [typescript 的例子](https://github.com/abeaudoin2013/react-beautiful-dnd-multi-list-typescript-example).
+
 
 ### 用 flow 类型示例应用程序
 
