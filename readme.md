@@ -16,7 +16,7 @@
 
 翻译的原文 | 与日期 | 最新更新 | 更多
 ---|---|---|---
-[commit] | ⏰ 2018 8.1 | ![last] | [more]
+[commit] | ⏰ 2018 8.1 | ![last] | [中文翻译][more]
 <!-- doc-templite END generated -->
 
 [last]: https://img.shields.io/github/last-commit/atlassian/react-beautiful-dnd.svg
