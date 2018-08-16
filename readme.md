@@ -9,25 +9,28 @@
 
 ---
 
-## 原文 readme.md commit 链接/日期
+## 校对 ✅
 
-https://github.com/atlassian/react-beautiful-dnd/blob/4fb9432999c92a55cc6c1549e94c565ce5668100/README.md#L3
+<!-- doc-templite START generated -->
+<!-- time = '2018 8.1' -->
 
-日期 : 2018 8.1
+翻译的原文 | 与日期 | 最新更新 | 更多
+---|---|---|---
+[commit] | ⏰ 2018 8.1 | ![last] | [more]
+<!-- doc-templite END generated -->
 
-### 翻译
+[last]: https://img.shields.io/github/last-commit/atlassian/react-beautiful-dnd.svg
+[commit]: https://github.com/atlassian/react-beautiful-dnd/blob/4fb9432999c92a55cc6c1549e94c565ce5668100/README.md#L3
+[more]: https://github.com/chinanf-boy/chinese-translate-list
 
-- 使用[translate-mds](https://github.com/chinanf-boy/translate-mds) 完成初稿
-
-### 生活/More
-
-[help me live , live need money 💰](https://github.com/chinanf-boy/live-need-money) | [更多其他中文翻译](https://github.com/chinanf-boy/chinese-translate-list) 
 
 ### 贡献
 
 欢迎 👏 勘误/校对/更新贡献 😊 [具体贡献请看](https://github.com/chinanf-boy/chinese-translate-list#贡献)
 
+## 生活
 
+[help me live , live need money 💰](https://github.com/chinanf-boy/live-need-money)
 
 ---
 
