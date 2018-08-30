@@ -13,16 +13,16 @@
 
 <!-- doc-templite START generated -->
 <!-- time = '2018 8.1' -->
-
+<!-- repo = 'atlassian/react-beautiful-dnd' -->
+<!-- commit = '4fb9432999c92a55cc6c1549e94c565ce5668100' -->
 翻译的原文 | 与日期 | 最新更新 | 更多
 ---|---|---|---
-[commit] | ⏰ 2018 8.1 | ![last] | [中文翻译][more]
-<!-- doc-templite END generated -->
+[commit] | ⏰ 2018 8.1 | ![last] | [中文翻译][translate-list]
 
 [last]: https://img.shields.io/github/last-commit/atlassian/react-beautiful-dnd.svg
-[commit]: https://github.com/atlassian/react-beautiful-dnd/blob/4fb9432999c92a55cc6c1549e94c565ce5668100/README.md#L3
-[more]: https://github.com/chinanf-boy/chinese-translate-list
+[commit]: https://github.com/atlassian/react-beautiful-dnd/tree/4fb9432999c92a55cc6c1549e94c565ce5668100
 
+<!-- doc-templite END generated -->
 
 ### 贡献
 
