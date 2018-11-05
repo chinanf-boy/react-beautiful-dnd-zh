@@ -9,12 +9,12 @@
 
 ---
 
-## 校对 ✅
+## 更新 中
 
 <!-- doc-templite START generated -->
-<!-- time = '2018 8.1' -->
+<!-- time = '2018 10.31' -->
 <!-- repo = 'atlassian/react-beautiful-dnd' -->
-<!-- commit = '4fb9432999c92a55cc6c1549e94c565ce5668100' -->
+<!-- commit = '5fc46a8296e8a91ab7e417d0a948c2f69cfafd43' -->
 翻译的原文 | 与日期 | 最新更新 | 更多
 ---|---|---|---
 [commit] | ⏰ 2018 8.1 | ![last] | [中文翻译][translate-list]
@@ -23,6 +23,17 @@
 [commit]: https://github.com/atlassian/react-beautiful-dnd/tree/4fb9432999c92a55cc6c1549e94c565ce5668100
 
 <!-- doc-templite END generated -->
+
+- [x] readme
+- [ ] docs/**
+  - [ ] docs/guides/dragging-svgs.zh.md
+  - [ ] docs/guides/screen-reader.zh.md
+  - [ ] docs/guides/using-inner-ref.zh.md
+  - [ ] docs/guides/how-we-use-dom-events.zh.md
+  - [ ] docs/guides/hooks.zh.md
+  - [ ] docs/patterns/tables.zh.md
+  - [ ] docs/patterns/using-a-portal.zh.md
+  - [ ] docs/patterns/multi-drag.zh.md
 
 ### 贡献
 
@@ -50,8 +61,6 @@
 <details>
 
 <summary> <strong> ❤️ react-beautiful-dnd 文档目录 ❤️</strong> </summary>
-
-校对完成✅ - ⏰2018 6.26
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -218,13 +227,6 @@
 
 > 即将推出: 获取入门指南!
 
-## 其他语言
- 
-- [![kr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png) **한글/Korean**](https://github.com/LeeHyungGeun/react-beautiful-dnd-kr)
- 
-- [![china](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **中文/Chinese**](https://github.com/chinanf-boy/react-beautiful-dnd-zh)
-
-
 ## 核心特点
 
 -   美丽,自然的物品移动
@@ -254,13 +256,13 @@
 -   列表之间的移动 (▤ ↔ ▤) 
 -   鼠标 🐭,键盘 🎹 和触摸 👉📱 (手机,平板电脑等) 支持
 -   自动滚动 - 在拖动过程中根据需要自动滚动容器和窗口 (即使是使用键盘🔥) 
--   [多拖动支持](/docs/patterns/multi-drag.md)
+-   [多拖动支持](/docs/patterns/multi-drag.zh.md)
 -   令人难以置信的屏幕阅读器支持 - 我们为开箱即用的英文屏幕阅读器提供了惊人的体验. 我们还为需要它的人提供完整的定制控制和国际化支持
 -   [拖动](https://github.com/atlassian/react-beautiful-dnd#props-1)和[放下](https://github.com/atlassian/react-beautiful-dnd#conditionally-dropping)条件
 -   在一个页面上有多个独立的列表
 -   灵活的项目大小 - 可拖动的项目可以有不同的高度 (垂直列表) 或宽度 (水平列表) 
--   兼容 semantic 表重新排序 -[表格模式](/docs/patterns/tables.md)
--   兼容[`React.Portal`](https://reactjs.org/docs/portals.html)-[ Portal 模式「portal pattern」](/docs/patterns/using-a-portal.md)
+-   兼容 semantic 表重新排序 -[表格模式](/docs/patterns/tables.zh.md)
+-   兼容[`React.Portal`](https://reactjs.org/docs/portals.html)-[ Portal 模式「portal pattern」](/docs/patterns/using-a-portal.zh.md)
 -   自定义拖动控制 - 您可以通过拖动整个项目的一部分
 -   一个`Droppable`列表可以是滚动容器 (没有可滚动的父项) 或者是滚动容器的子项 (也没有可滚动的父项) 
 -   独立的嵌套列表 - 列表可以是另一个列表的子项,但不能将项目从父列表拖到子列表中
@@ -400,7 +402,7 @@
 
 我们提供 **对屏幕阅读器的精彩支持**帮助视觉 (或其他) 损伤的用户. 我们随机附带英文短信📦. 但是,欢迎您使用`announce`函数覆盖这些消息, 函数提供给所有的函数`DragDropContext > hook`功能. 
 
-见我们的[屏幕阅读器指南](docs/guides/screen-reader.md)为指导制作有用的屏幕阅读器信息. 
+见我们的[屏幕阅读器指南](docs/guides/screen-reader.zh.md)为指导制作有用的屏幕阅读器信息. 
 
 #### 示例屏幕阅读器行为
 
@@ -416,7 +418,7 @@
 
  (🐱🎁是一个[薛定谔的猫](https://www.youtube.com/watch?v=IOYyCHGWJq4)玩笑) 
 
-> 要查看更多关于我们如何影响标准浏览器事件的深入信息,请参阅我们的[我们如何使用DOM事件指南](docs/guides/how-we-use-dom-events.md)
+> 要查看更多关于我们如何影响标准浏览器事件的深入信息,请参阅我们的[我们如何使用DOM事件指南](docs/guides/how-we-use-dom-events.zh.md)
 
 ### 键盘快捷键: 鼠标拖动
 
@@ -437,7 +439,7 @@
 
 `react-beautiful-dnd`仅支持使用键盘进行拖动. 我们审核了我们的键盘快捷键如何与标准浏览器键盘交互进行交互. 当用户没有拖动时,他们可以像平常一样使用键盘. 拖动时,我们覆盖并禁用某些浏览器快捷方式 (如`tab`) 以确保用户的流畅体验. 
 
-> 要查看更多关于我们如何影响标准浏览器事件的深入信息,请参阅我们的[我们如何使用DOM事件指南](docs/guides/how-we-use-dom-events.md)
+> 要查看更多关于我们如何影响标准浏览器事件的深入信息,请参阅我们的[我们如何使用DOM事件指南](docs/guides/how-we-use-dom-events.zh.md)
 
 ### 键盘快捷键: 键盘拖动
 
@@ -481,7 +483,7 @@
 
 当用户按下他们的手指 (或其他输入) 时`Draggable`我们不确定他们是否有意*点击*,*强按*,*滚动容器*要么*拖动*. **越多越好`react-beautiful-dnd`旨在确保用户默认的交互体验不受影响**. 
 
-> 要查看更多关于我们如何影响标准浏览器事件的深入信息,请参阅我们的[我们如何使用DOM事件指南](docs/guides/how-we-use-dom-events.md)
+> 要查看更多关于我们如何影响标准浏览器事件的深入信息,请参阅我们的[我们如何使用DOM事件指南](docs/guides/how-we-use-dom-events.zh.md)
 
 ### 开始拖动: 长按
 
@@ -524,7 +526,7 @@ class App extends React.Component {
 
 ## 多拖
 
-我们创造了一个[多拖动模式](/docs/patterns/multi-drag.md)你可以建立在顶部`react-beautiful-dnd`为了支持拖动多个`Draggable`项目一次. 
+我们创造了一个[多拖动模式](/docs/patterns/multi-drag.zh.md)你可以建立在顶部`react-beautiful-dnd`为了支持拖动多个`Draggable`项目一次. 
 
 ![multi drag demo](https://user-images.githubusercontent.com/2182637/37322724-7843a218-26d3-11e8-9ebb-8d5853387bb3.gif)
 
@@ -710,20 +712,22 @@ npm install react-beautiful-dnd --save
 ```js
 type Hooks = {|
   // optional
+  onDragBeforeStart?: OnDragBeforeStartHook,
   onDragStart?: OnDragStartHook,
   onDragUpdate?: OnDragUpdateHook,
-  // always required
+  // required
   onDragEnd: OnDragEndHook,
-|}
+|};
 
-type OnDragStartHook = (start: DragStart, provided: HookProvided) => void;
-type OnDragUpdateHook = (update: DragUpdate, provided: HookProvided) => void;
-type OnDragEndHook = (result: DropResult, provided: HookProvided) => void;
+type OnBeforeDragStartHook = (start: DragStart) => mixed;
+type OnDragStartHook = (start: DragStart, provided: HookProvided) => mixed;
+type OnDragUpdateHook = (update: DragUpdate, provided: HookProvided) => mixed;
+type OnDragEndHook = (result: DropResult, provided: HookProvided) => mixed;
 
 type Props = {|
   ...Hooks,
   children: ?Node,
-|}
+|};
 ```
 
 ### 基本用法
@@ -758,165 +762,9 @@ class App extends React.Component {
 
 ### 钩子们{Hook}
 
-这些是顶级应用程序事件,您可以使用它来执行自己的状态更新 以及 制作屏幕阅读器公告. 有关控制屏幕阅读器的更多信息,请参阅我们的[屏幕阅读器指南](docs/guides/screen-reader.md)
+Hooks是顶级应用程序事件,您可以使用它来执行自己的状态更新 以及 制作屏幕阅读器公告. 有关控制屏幕阅读器的更多信息,请参阅我们的[屏幕阅读器指南](docs/guides/screen-reader.zh.md)
 
-### `provided: HookProvided`
-
-```js
-type HookProvided = {|
-  announce: Announce,
-|}
-
-type Announce = (message: string) => void;
-```
-
-所有钩子都提供了第二个参数: `HookProvided`. 该对象有一个属性: `announce`. 此功能用于同步向屏幕阅读器发布消息. 如果你不使用这个功能,我们会宣布一个默认的英文信息. 我们创造了一个[屏幕阅读器使用指南](docs/guides/screen-reader.md)如果您有兴趣为自己控制屏幕阅读器信息并支持国际化,我们建议您使用它. 如果你正在使用`announce`它必须被同步调用. 
-
-### `onDragStart` (可选的) 
-
-```js
-type OnDragStartHook = (start: DragStart, provided: HookProvided) => void;
-```
-
-`onDragStart`将在拖动开始时收到通知. 这个钩子是*可选的*因此不需要提供. 它是 **强烈推荐**您使用此功能来阻止所有在拖动过程中的组件更新`Draggable`和`Droppable`.  (看到[*最佳实践`hooks` *](https://github.com/atlassian/react-beautiful-dnd#best-practices-for-hooks)) 
-
-您将获得以下详细信息: 
-
-#### `start: DragStart`
-
-```js
-type DragStart = {|
-  draggableId: DraggableId,
-  type: TypeId,
-  source: DraggableLocation,
-|}
-```
-
--   `start.draggableId`: 现在正在拖动`Draggable`的ID
--   `start.type`: 现在正在拖动`Draggable`的`type`
--   `start.source`:  (`droppableId`和`index`) 拖动物在`Droppable`中一个开始的位置. 
-
-#### `onDragStart`类型信息
-
-```js
-type OnDragStartHook = (start: DragStart, provided: HookProvided) => void;
-
-// supporting types
-type DragStart = {|
-  draggableId: DraggableId,
-  type: TypeId,
-  source: DraggableLocation,
-|}
-
-type DraggableLocation = {|
-  droppableId: DroppableId,
-  // the position of the draggable within a droppable
-  index: number
-|};
-type Id = string;
-type DraggableId = Id;
-type DroppableId = Id;
-type TypeId = Id;
-```
-
-### `onDragUpdate` (可选的) 
-
-```js
-type OnDragUpdateHook = (update: DragUpdate, provided: HookProvided) => void;
-```
-
-只要拖动过程中发生某些变化,就会调用该钩子. 可能的变化是: 
-
--   已经改变`Draggable`的位置
--   该`Draggable`现在被不同`Droppable`覆盖
--   该`Draggable`现在被没有`Droppable`覆盖
-
-由于此功能,您不需要做太多工作,因为它会减慢阻力. 
-
-#### `update: DragUpdate`
-
-```js
-type DragUpdate = {|
-  ...DragStart,
-  // may not have any destination (drag to nowhere)
-  destination: ?DraggableLocation,
-|}
-```
-
--   `update.draggableId`: 现在正在拖动`Draggable`的ID
--   `update.type`: 现在正在拖动`Draggable`的`type`
--   `update.source`:  (`droppableId`和`index`) 拖动物在`Droppable`中开始的位置. 
--   `update.destination`:  (`droppableId`和`index`) 拖动物在`Droppable`中现在的位置. 如果用户当前没有拖动任何内容,则该值可以为null`Droppable`. 
-
-### `onDragEnd` (需要) 
-
-这个功能是在应用程序生命周期中扮演着*非常*重要的角色. **这个功能必然导致*同步*重新排序列表`Draggables`**
-
-它提供了有关拖动的所有信息: 
-
-#### `result: DropResult`
-
-```js
-type DropResult = {|
-  ...DragUpdate,
-  reason: DropReason,
-|}
-
-type DropReason = 'DROP' | 'CANCEL';
-```
-
--   `result.draggableId`: 现在正在拖动`Draggable`的ID
--   `result.type`: 现在正在拖动`Draggable`的`type`
--   `result.source`: `Draggable`开始所在的位置. 
--   `result.destination`: `Draggable`借宿所在的位置. 该`destination`将会`null`,如果用户在不放在`Droppable`. 
--   `result.reason`: 发生放下的原因. 这些信息可以帮助我们制作更有用的消息`HookProvided`>`announce`功能. 
-
-### 同步重新排序
-
-因为这个 库 不能控制你的状态,所以你可以基于`result: DropResult`, *同步*重新排列你的名单. 
-
-#### 这是你需要做的
-
--   如果`destination`是`null`:  全做完了!
--   如果`source.droppableId`等于`destination.droppableId`您需要从列表中删除该项目并将其插入到正确的位置. 
--   如果`source.droppableId`不相等`destination.droppableId`,那么你需要删除来自`source.droppableId`列表的`Draggable`, 并将其添加到正确的位置`destination.droppableId`名单. 
-
-### 坚持重新排序
-
-如果您需要将重新排序保留到远程数据存储区 - 在客户端上同步更新列表,并在后台触发请求以保持更改. 如果远程保存失败,则由您决定如何与用户通信并更新或不更新列表. 
-
-### 钩子的最佳实践
-
-#### 在拖动过程中阻止更新
-
-**高度**建议: 用户拖动时阻止可能影响数量的任何状态更新`Draggable`s和`Droppable`或其尺寸. 请监听`onDragStart`并阻止更新`Draggable`s和`Droppable`直到你收到`onDragEnd`. 
-
-当用户开始拖动时,我们会拍摄适用的所有尺寸的快照`Draggable`和`Droppable`节点. 如果在拖动过程中这些变化我们不会知道. 
-
-##### 你如何阻止更新?
-
-取决于您如何管理数据,更新阻止会有所不同. 这可能是最好的例子解释: 
-
-假设您正在使用React组件状态来管理应用程序的状态. 您的应用程序状态与 您每隔三十秒轮询一次数据更新 的REST端点相关联. 在拖动过程中,您不应该应用任何可能会影响可见效果的服务器更新. 
-
-这可能意味着: 
-
--   在拖动过程中停止服务器轮询
--   在拖动过程中忽略来自服务器调用的任何结果 (不要调用`this.setState`在您的组件中使用新数据) 
-
-##### 没有更新阻止会导致不好的时间
-
-这里有一些糟糕的用户体验,如果你改变了事情,*在拖动期间*可能会发生: 
-
--   如果增加节点数量,那么 库 将不知道它们,并且当用户期望它们时, 它们将不会移动. 
--   如果您减少节点数量,那么列表中可能会出现空白和意外动作. 
--   如果更改任何节点的维度,则可能导致更改的节点以及其他节点在不正确的时间移动. 
--   如果您删除用户正在拖动的节点,则该拖动将立即结束
--   如果您更改拖动节点的尺寸,那么其他内容在正确的时间将不会移动. 
-
-### `onDragStart`和`onDragEnd`配对
-
-我们非常努力地确保每一个`onDragStart`事件与单一配对`onDragEnd`事件. 但是,在这种情况下可能会出现流氓情况. 如果发生这种情况 - 这是一个错误. 目前没有任何机制可以告诉 库 从外部取消当前的拖拽. 
+[请查看Hooks，指南](docs/guides/hooks.zh.md)，了解更多 ❤️
 
 ## `Droppable`
 
@@ -982,7 +830,7 @@ type DroppableProps = {|
 
 -   `provided.innerRef`:为了使 droppable 能够正常工作,你必须 **绑定**到最高可能的DOM节点中`provided.innerRef`. `ReactElement`我们这样做是为了避免需要使用查找您的DOM节点. `ReactDOM`有关使用的更多信息
 
-> 看我们的`innerRef`运用[指南`innerRef`: 这用于在中创建空间](/docs/patterns/using-inner-ref.md)
+> 看我们的`innerRef`运用[指南`innerRef`: 这用于在中创建空间](/docs/patterns/using-inner-ref.zh.md)
 
 -   `provided.placeholder`根据需要拖动. `Droppable`当用户拖动不是主列表的列表时,需要此空间. 请确保将 占位符 放在您为其提供 ref 的组件中. 我们需要增加大小本身. `Droppable`: 这是一个 Object,它包含需要应用于 Droppable 元素的属性. 
 
@@ -1115,7 +963,7 @@ class Students extends Component {
 
 `Draggable`组件可以拖动并拖放到其`Droppable`s上. 一个`Draggable`必须始终包含在一个`Droppable`. 它是 **可能**重新排序`Draggable`在其`Droppable`家中或移动到另一个`Droppable`. 它是 **可能**因为一个`Droppable`可以自由地控制它允许投入的内容. 
 
-一切`Draggable`有一个*拖动控制*. 一个*拖动控制*是用户为了拖动而与之交互的元素`Draggable`. 一个*拖动控制*可以是`Draggable`元素本身,还是孩子的`Draggable`. 
+每个`Draggable`有一个*拖动控制*. 一个*拖动控制*是用户为了拖动而与之交互的元素`Draggable`. 一个*拖动控制*可以是`Draggable`元素本身,还是孩子的`Draggable`. 
 
 ```js
 import { Draggable } from 'react-beautiful-dnd';
@@ -1141,15 +989,21 @@ import { Draggable } from 'react-beautiful-dnd';
 -   `index`:  一个*需要* `number`它与`Draggable`的顺序相匹配在`Droppable`里面. 它只是简单的索引`Draggable`在列表中. 该`index`在一个内部需要是唯一的`Droppable`, 但不需要是唯一的`Droppables`. 通常情况下`index`价值将是简单的`index`由`Array.prototype.map`函数提供: 
 
 ```js
-{this.props.items.map((item, index) => (
-  <Draggable draggableId={item.id} index={index}>
-    {(provided, snapshot) => (
-      <div ref={provided.innerRef} {...provided.draggableProps}>
-        {item.content}
-      </div>
-    )}
-  </Draggable>
-))}
+{
+  this.props.items.map((item, index) => (
+    <Draggable draggableId={item.id} index={index}>
+      {(provided, snapshot) => (
+        <div
+          ref={provided.innerRef}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+        >
+          {item.content}
+        </div>
+      )}
+    </Draggable>
+  ));
+}
 ```
 
 -   `isDragDisabled`: *可选的*标志来控制是否`Draggable`被允许拖动. 您可以使用它来实现自己的条件拖动逻辑. 它将默认为`false`. 
@@ -1190,7 +1044,7 @@ type DraggableProvided = {|
 
 -   `provided.innerRef (innerRef: (HTMLElement) => void)`: 为了`Droppable`正确运行, 你必须 **绑定**`innerRef`函数到你认为的`ReactElement`节点. `Draggable`我们这样做是为了避免需要使用查找您的DOM节点. `ReactDOM`有关使用的更多信息
 
-> 看我们的`innerRef`运用[指南`innerRef`例](/docs/patterns/using-inner-ref.md)
+> 看我们的`innerRef`运用[指南`innerRef`例](/docs/patterns/using-inner-ref.zh.md)
 
 ##### `innerRef`: 例子
 
@@ -1255,7 +1109,7 @@ type NotDraggingStyle = {|
 
 `react-beautiful-dnd`使用`position: fixed`定位拖动元素. 这是相当强大的,并允许你有`position: relative | absolute | fixed`父母. 然而,不幸的是`position:fixed`是[受到影响`transform`](http://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/) (如`transform: rotate(10deg);`) . 这意味着如果你有一个`transform: *`在`Draggable`的父母之一时, 那么拖动时定位逻辑将不正确. 瘸!对于大多数消费者来说,这不会是一个问题. 
 
-为了解决这个问题,你可以使用[`React.Portal`](https://reactjs.org/docs/portals.html). 我们不会默认启用此功能,因为它有性能问题. 我们有一个[使用 Portal 指南](/docs/patterns/using-a-portal.md)更详细地解释性能问题以及如何设置自己的问题`React.Portal`如果你想. 
+为了解决这个问题,你可以使用[`React.Portal`](https://reactjs.org/docs/portals.html). 我们不会默认启用此功能,因为它有性能问题. 我们有一个[使用 Portal 指南](/docs/patterns/using-a-portal.zh.md)更详细地解释性能问题以及如何设置自己的问题`React.Portal`如果你想. 
 
 ##### 在列表之间移动时保持焦点
 
@@ -1629,6 +1483,17 @@ import type { DroppableProvided } from 'react-beautiful-dnd';
 
 我们创造了一个[简单示例](https://github.com/alexreardon/react-beautiful-dnd-flow-example)它练习 flow . 这是一个超级简单`React`基于[`react-create-app`](https://github.com/facebookincubator/create-react-app). 你可以用它作为参考,看看如何正确设置. 
 
+## 社区
+
+- [kanban-dnd](https://kanban-dnd.glitch.me) \- A Kanban style to-do list, with the ability to create custom lanes and reorder them on the fly. 
+- Simple Trello - A simple cloning version of Trello, using React ecosystem.
+  - [Demo](https://simple-trello.netlify.com/)
+  - [Source](https://github.com/ng-hai/simple-trello)
+
+## 其他
+
+- [natural-drag-animation-rbdnd](https://github.com/rokborf/natural-drag-animation-rbdnd) adds natural dragging animation
+
 ## 工程健康
 
 ### 类型化
@@ -1658,7 +1523,7 @@ import type { DroppableProvided } from 'react-beautiful-dnd';
 
 | 桌面                                     | 版               |
 | -------------------------------------- | --------------- |
-| Microsoft Internet Explorer (Windows)  | 版本11            |
+| Microsoft Internet Explorer (Windows)  | 版本11   (Need to [polyfill `Array.prototype.find`][iepolyfill])         |
 | Microsoft Edge                         | 支持最新的稳定版本       |
 | Mozilla Firefox (所有平台)                 | 支持最新的稳定版本       |
 | Google Chrome (Windows和Mac)            | 支持最新的稳定版本       |
@@ -1668,7 +1533,9 @@ import type { DroppableProvided } from 'react-beautiful-dnd';
 | --------------------- | ------------------------------ |
 | Chrome (Android和iOS)  | 支持最新的稳定版本                      |
 | 移动Safari (iOS)        | 支持最新的稳定版本                      |
-| Android (Android)     | Android 4.0.3上的默认浏览器 (冰淇淋三明治)  |
+| Android (Android)     | Android 4.0.3上的默认浏览器 (冰淇淋三明治-Ice Cream Sandwich)  |
+
+[iepolyfill]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find#Polyfill))
 
 ## 作者
 
