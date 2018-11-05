@@ -70,11 +70,12 @@
   - [在桌面上查看](#%E5%9C%A8%E6%A1%8C%E9%9D%A2%E4%B8%8A%E6%9F%A5%E7%9C%8B)
   - [在手机或平板电脑上查看](#%E5%9C%A8%E6%89%8B%E6%9C%BA%E6%88%96%E5%B9%B3%E6%9D%BF%E7%94%B5%E8%84%91%E4%B8%8A%E6%9F%A5%E7%9C%8B)
 - [基本使用示例](#%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B)
-- [其他语言](#%E5%85%B6%E4%BB%96%E8%AF%AD%E8%A8%80)
-- [升级](#%E5%8D%87%E7%BA%A7)
 - [核心特点](#%E6%A0%B8%E5%BF%83%E7%89%B9%E7%82%B9)
+- [来来来,入门 🤩](#%E6%9D%A5%E6%9D%A5%E6%9D%A5%E5%85%A5%E9%97%A8-)
+- [Read this in other languages](#read-this-in-other-languages)
 - [目前支持的功能集](#%E7%9B%AE%E5%89%8D%E6%94%AF%E6%8C%81%E7%9A%84%E5%8A%9F%E8%83%BD%E9%9B%86)
   - [更多即将推出](#%E6%9B%B4%E5%A4%9A%E5%8D%B3%E5%B0%86%E6%8E%A8%E5%87%BA)
+- [升级](#%E5%8D%87%E7%BA%A7)
 - [并不适合所有人](#%E5%B9%B6%E4%B8%8D%E9%80%82%E5%90%88%E6%89%80%E6%9C%89%E4%BA%BA)
 - [驾驶理念: 物理性](#%E9%A9%BE%E9%A9%B6%E7%90%86%E5%BF%B5-%E7%89%A9%E7%90%86%E6%80%A7)
   - [应用1: 没有即时移动](#%E5%BA%94%E7%94%A81-%E6%B2%A1%E6%9C%89%E5%8D%B3%E6%97%B6%E7%A7%BB%E5%8A%A8)
@@ -135,22 +136,6 @@
   - [Props](#props)
   - [基本用法](#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95)
   - [钩子们{Hook}](#%E9%92%A9%E5%AD%90%E4%BB%AChook)
-  - [`provided: HookProvided`](#provided-hookprovided)
-  - [`onDragStart` (可选的)](#ondragstart-%E5%8F%AF%E9%80%89%E7%9A%84)
-    - [`start: DragStart`](#start-dragstart)
-    - [`onDragStart`类型信息](#ondragstart%E7%B1%BB%E5%9E%8B%E4%BF%A1%E6%81%AF)
-  - [`onDragUpdate` (可选的)](#ondragupdate-%E5%8F%AF%E9%80%89%E7%9A%84)
-    - [`update: DragUpdate`](#update-dragupdate)
-  - [`onDragEnd` (需要)](#ondragend-%E9%9C%80%E8%A6%81)
-    - [`result: DropResult`](#result-dropresult)
-  - [同步重新排序](#%E5%90%8C%E6%AD%A5%E9%87%8D%E6%96%B0%E6%8E%92%E5%BA%8F)
-    - [这是你需要做的](#%E8%BF%99%E6%98%AF%E4%BD%A0%E9%9C%80%E8%A6%81%E5%81%9A%E7%9A%84)
-  - [坚持重新排序](#%E5%9D%9A%E6%8C%81%E9%87%8D%E6%96%B0%E6%8E%92%E5%BA%8F)
-  - [钩子的最佳实践](#%E9%92%A9%E5%AD%90%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5)
-    - [在拖动过程中阻止更新](#%E5%9C%A8%E6%8B%96%E5%8A%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%98%BB%E6%AD%A2%E6%9B%B4%E6%96%B0)
-      - [你如何阻止更新?](#%E4%BD%A0%E5%A6%82%E4%BD%95%E9%98%BB%E6%AD%A2%E6%9B%B4%E6%96%B0)
-      - [没有更新阻止会导致不好的时间](#%E6%B2%A1%E6%9C%89%E6%9B%B4%E6%96%B0%E9%98%BB%E6%AD%A2%E4%BC%9A%E5%AF%BC%E8%87%B4%E4%B8%8D%E5%A5%BD%E7%9A%84%E6%97%B6%E9%97%B4)
-  - [`onDragStart`和`onDragEnd`配对](#ondragstart%E5%92%8Condragend%E9%85%8D%E5%AF%B9)
 - [`Droppable`](#droppable)
   - [可拖 Props](#%E5%8F%AF%E6%8B%96-props)
   - [子函数](#%E5%AD%90%E5%87%BD%E6%95%B0)
@@ -187,6 +172,8 @@
   - [使用 Flow 类型](#%E4%BD%BF%E7%94%A8-flow-%E7%B1%BB%E5%9E%8B)
 - [Typescript](#typescript)
   - [用 flow 类型示例应用程序](#%E7%94%A8-flow-%E7%B1%BB%E5%9E%8B%E7%A4%BA%E4%BE%8B%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F)
+- [社区作品](#%E7%A4%BE%E5%8C%BA%E4%BD%9C%E5%93%81)
+- [其他](#%E5%85%B6%E4%BB%96)
 - [工程健康](#%E5%B7%A5%E7%A8%8B%E5%81%A5%E5%BA%B7)
   - [类型化](#%E7%B1%BB%E5%9E%8B%E5%8C%96)
   - [经测试](#%E7%BB%8F%E6%B5%8B%E8%AF%95)
@@ -1483,7 +1470,7 @@ import type { DroppableProvided } from 'react-beautiful-dnd';
 
 我们创造了一个[简单示例](https://github.com/alexreardon/react-beautiful-dnd-flow-example)它练习 flow . 这是一个超级简单`React`基于[`react-create-app`](https://github.com/facebookincubator/create-react-app). 你可以用它作为参考,看看如何正确设置. 
 
-## 社区
+## 社区作品
 
 - [kanban-dnd](https://kanban-dnd.glitch.me) \- 一个看云样式的TODO列表，能够创建自定义通道，并在运行中重新排序. 
 - Simple Trello - Trello的简单clone版本, 使用 React 生态.
