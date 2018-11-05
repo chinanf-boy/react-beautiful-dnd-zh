@@ -31,8 +31,8 @@
   - [x] [docs/guides/using-inner-ref.zh.md](docs/guides/using-inner-ref.zh.md)
   - [ ] [docs/guides/how-we-use-dom-events.zh.md](docs/guides/how-we-use-dom-events.zh.md)
   - [x] [docs/guides/hooks.zh.md](docs/guides/hooks.zh.md)
-  - [ ] [docs/patterns/tables.zh.md](docs/patterns/tables.zh.md)
-  - [ ] [docs/patterns/using-a-portal.zh.md](docs/patterns/using-a-portal.zh.md)
+  - [x] [docs/patterns/tables.zh.md](docs/patterns/tables.zh.md)
+  - [x] [docs/patterns/using-a-portal.zh.md](docs/patterns/using-a-portal.zh.md)
   - [ ] [docs/patterns/multi-drag.zh.md](docs/patterns/multi-drag.zh.md)
 
 ### 贡献
@@ -248,7 +248,7 @@
 -   [拖动](https://github.com/atlassian/react-beautiful-dnd#props-1)和[放下](https://github.com/atlassian/react-beautiful-dnd#conditionally-dropping)条件
 -   在一个页面上有多个独立的列表
 -   灵活的项目大小 - 可拖动的项目可以有不同的高度 (垂直列表) 或宽度 (水平列表) 
--   兼容 semantic 表重新排序 -[表格模式](/docs/patterns/tables.zh.md)
+-   兼容 semantic 表格 重新排序 -[表格模式](/docs/patterns/tables.zh.md)
 -   兼容[`React.Portal`](https://reactjs.org/docs/portals.html)-[ Portal 模式「portal pattern」](/docs/patterns/using-a-portal.zh.md)
 -   自定义拖动控制 - 您可以通过拖动整个项目的一部分
 -   一个`Droppable`列表可以是滚动容器 (没有可滚动的父项) 或者是滚动容器的子项 (也没有可滚动的父项) 
