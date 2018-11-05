@@ -1,6 +1,6 @@
 # 我们如何使用DOM事件
 
-> 这个页面详细介绍了我们如何使用DOM输入事件,我们如何使用它们,以及如何在我们的使用之上构建事物.**通常,您不需要知道此信息**但是,如果您还将自己的事件处理程序绑定到窗口或a*拖动手柄*.⚠️注意:由于a[webkit中的错误](https://bugs.webkit.org/show_bug.cgi?id=184250),特别是诸如此类事件`mousemove`将无法正确设置`event.defaultPrevented`至`true`什么时候`event.preventDefault()`叫做.您可以关注此问题的进展[这里](https://github.com/atlassian/react-beautiful-dnd/issues/413).
+> 这个页面详细介绍了我们如何使用DOM输入事件,我们如何使用它们,以及如何在我们的使用之上构建事物.**通常,您不需要知道此信息**但是,如果您还将自己的事件处理程序绑定到窗口或a*拖动控制*.⚠️注意:由于a[webkit中的错误](https://bugs.webkit.org/show_bug.cgi?id=184250),特别是诸如此类事件`mousemove`将无法正确设置`event.defaultPrevented`至`true`什么时候`event.preventDefault()`叫做.您可以关注此问题的进展[这里](https://github.com/atlassian/react-beautiful-dnd/issues/413).
 
 ## 先验知识
 
@@ -13,10 +13,10 @@
 
 无需深入了解下面的所有细节,这里是最安全的事件处理程序`react-beautiful-dnd`:
 
-> 这些可以添加到*拖动手柄*,树上任何其他地方或直接窗口.
+> 这些可以添加到*拖动控制*,树上任何其他地方或直接窗口.
 
 -   `onClick`:`event.defaultPrevented`属性将设置为`true`如果作为拖动交互的一部分发生.即使拖动未通过诸如之类的预先单击操作完成,也是如此`mouseup`要么`touchend`.看到[邋click点击和点击预防](https://github.com/atlassian/react-beautiful-dnd#sloppy-clicks-and-click-prevention-).
--   `onKeyDown`:`event.defaultPrevented`属性将设置为`true`如果它被用作拖拽的一部分.如果你添加`onKeyDown`到了*拖动手柄*你将需要猴子补丁[`DragHandleProps`](https://github.com/atlassian/react-beautiful-dnd#draghandleprops-type-information) `onKeyDown`事件处理程序
+-   `onKeyDown`:`event.defaultPrevented`属性将设置为`true`如果它被用作拖拽的一部分.如果你添加`onKeyDown`到了*拖动控制*你将需要猴子补丁[`DragHandleProps`](https://github.com/atlassian/react-beautiful-dnd#draghandleprops-type-information) `onKeyDown`事件处理程序
 
 您可能需要使用来自的信息来提高事件处理程序的逻辑[`onDragStart`](https://github.com/atlassian/react-beautiful-dnd#ondragstart-optional)和[`onDragEnd`](https://github.com/atlassian/react-beautiful-dnd#ondragend-required)了解在这些事件发生时是否发生阻力.
 
@@ -31,7 +31,7 @@
 -   我们用:`event.preventDefault()`
 -   我们不使用:`event.stopPropagation()`
 
-我们添加了一些事件处理程序*拖动手柄*本身(见[`DragHandleProps`](https://github.com/atlassian/react-beautiful-dnd#draghandleprops-type-information))和我们添加的其他人`window`在里面[捕获阶段](https://javascript.info/bubbling-and-capturing#capturing).这意味着只要您在中使用事件处理程序[冒泡阶段](https://javascript.info/bubbling-and-capturing#bubbling)(这是事件处理程序的默认设置)然后事件的行为将如此页面所述.
+我们添加了一些事件处理程序*拖动控制*本身(见[`DragHandleProps`](https://github.com/atlassian/react-beautiful-dnd#draghandleprops-type-information))和我们添加的其他人`window`在里面[捕获阶段](https://javascript.info/bubbling-and-capturing#capturing).这意味着只要您在中使用事件处理程序[冒泡阶段](https://javascript.info/bubbling-and-capturing#bubbling)(这是事件处理程序的默认设置)然后事件的行为将如此页面所述.
 
 为了知道我们是否已经将事件用于拖放的目的,您需要检查[`event.defaultPrevented`](https://developer.mozilla.org/en-US/docs/Web/API/Event/defaultPrevented)属性.
 
@@ -60,7 +60,7 @@ window.addEventListener('click', (event: MouseEvent) => {
 
 > 这是我们规则集中唯一已知的例外.不幸的是,这是第一个出现在本指南中的!
 
-当用户第一次执行时`mousedown`在...上*拖动手柄*我们不确定他们是否打算点击或拖动.理想情况下,我们不会打电话`preventDefault()`因为我们不确定它是否是拖累的一部分.但是,我们需要打电话`preventDefault()`为了避免项目获得焦点,因为它有一个`tabIndex`.
+当用户第一次执行时`mousedown`在...上*拖动控制*我们不确定他们是否打算点击或拖动.理想情况下,我们不会打电话`preventDefault()`因为我们不确定它是否是拖累的一部分.但是,我们需要打电话`preventDefault()`为了避免项目获得焦点,因为它有一个`tabIndex`.
 
 ### 我们还不确定是否会开始拖累
 

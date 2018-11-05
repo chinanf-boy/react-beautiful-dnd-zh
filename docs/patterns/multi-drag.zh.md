@@ -17,7 +17,7 @@
 我们可以分三个阶段打破用户体验.
 
 1.  [**选择**](#selection):用户选择一个或多个项目.
-2.  [**拖延**](#dragging):用户拖动一个项目作为整个组的表示.
+2.  [**拖拽**](#dragging):用户拖动一个项目作为整个组的表示.
 3.  [**删除**](#dropping):用户将项目放入新位置.我们将所有选定的项目移动到新位置
 
 ## 通告
@@ -40,15 +40,15 @@
 
 #### `onClick`事件处理程序
 
--   附上一个`onClick`处理你的*拖动手柄*要么`Draggable`
+-   附上一个`onClick`处理你的*拖动控制*要么`Draggable`
 -   仅在用户使用时切换选择[`primaryButton`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button)(`event.button === 0`)
 -   防止默认操作`click`因为你正在使用它进行选择(它只对你有用`event.preventDefault()`避免*选择清算*)
 
 #### 键盘事件处理程序
 
 -   当用户按下时**输入** <kbd>⏎</kbd>切换项目的选择
--   **选项1**:附上一个`onKeyDown`处理你的*拖动手柄*要么`Draggable`.你将需要猴子补丁`DragHandleProvided > onKeyDown`键盘处理程序
--   **选项2**:附上一个`onKeyUp`处理你的*拖动手柄*.那你就不需要猴子补丁了`onKeyDown`处理程序.然而,`keyup`事件不会阻止其默认操作,因此您将无法检查`event.defaultPrevented`查看按键是否用于拖动.如果你只是使用**输入** <kbd>⏎</kbd>键入你的事件处理程序然后你应该没事,因为它不用作拖动的一部分.
+-   **选项1**:附上一个`onKeyDown`处理你的*拖动控制*要么`Draggable`.你将需要猴子补丁`DragHandleProvided > onKeyDown`键盘处理程序
+-   **选项2**:附上一个`onKeyUp`处理你的*拖动控制*.那你就不需要猴子补丁了`onKeyDown`处理程序.然而,`keyup`事件不会阻止其默认操作,因此您将无法检查`event.defaultPrevented`查看按键是否用于拖动.如果你只是使用**输入** <kbd>⏎</kbd>键入你的事件处理程序然后你应该没事,因为它不用作拖动的一部分.
 -   防止默认操作`keydown`/`keyup`如果您在选择时切换选择,因为您要选择退出标准浏览器行为并且还提供已使用此事件的线索,则会触发该事件.
 
 #### 切换选择行为
@@ -239,7 +239,7 @@ class Task extends Component<Props> {
 
 您可以构建自己的抽象(或使用一些其他)来添加选择框的想法.您可以使用此选项允许用户在要选择的项目周围拖动一个框.[例](http://threedubmedia.com/code/event/drop/demo/selection)
 
-## 拖延
+## 拖拽
 
 我们需要办理一张登机手续`onDragStart`.如果用户开始拖动未选择的内容,则需要清除选择.
 

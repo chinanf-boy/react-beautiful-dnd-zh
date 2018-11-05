@@ -26,14 +26,14 @@
 
 - [x] readme
 - [ ] docs/**
-  - [ ] docs/guides/dragging-svgs.zh.md
-  - [ ] docs/guides/screen-reader.zh.md
-  - [ ] docs/guides/using-inner-ref.zh.md
-  - [ ] docs/guides/how-we-use-dom-events.zh.md
-  - [ ] docs/guides/hooks.zh.md
-  - [ ] docs/patterns/tables.zh.md
-  - [ ] docs/patterns/using-a-portal.zh.md
-  - [ ] docs/patterns/multi-drag.zh.md
+  - [x] [docs/guides/dragging-svgs.zh.md](docs/guides/dragging-svgs.zh.md)
+  - [ ] [docs/guides/screen-reader.zh.md](docs/guides/screen-reader.zh.md)
+  - [ ] [docs/guides/using-inner-ref.zh.md](docs/guides/using-inner-ref.zh.md)
+  - [ ] [docs/guides/how-we-use-dom-events.zh.md](docs/guides/how-we-use-dom-events.zh.md)
+  - [ ] [docs/guides/hooks.zh.md](docs/guides/hooks.zh.md)
+  - [ ] [docs/patterns/tables.zh.md](docs/patterns/tables.zh.md)
+  - [ ] [docs/patterns/using-a-portal.zh.md](docs/patterns/using-a-portal.zh.md)
+  - [ ] [docs/patterns/multi-drag.zh.md](docs/patterns/multi-drag.zh.md)
 
 ### 贡献
 
@@ -1485,8 +1485,8 @@ import type { DroppableProvided } from 'react-beautiful-dnd';
 
 ## 社区
 
-- [kanban-dnd](https://kanban-dnd.glitch.me) \- A Kanban style to-do list, with the ability to create custom lanes and reorder them on the fly. 
-- Simple Trello - A simple cloning version of Trello, using React ecosystem.
+- [kanban-dnd](https://kanban-dnd.glitch.me) \- 一个看云样式的TODO列表，能够创建自定义通道，并在运行中重新排序. 
+- Simple Trello - Trello的简单clone版本, 使用 React 生态.
   - [Demo](https://simple-trello.netlify.com/)
   - [Source](https://github.com/ng-hai/simple-trello)
 

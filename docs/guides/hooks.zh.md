@@ -52,8 +52,8 @@ type DragStart = {|
 |};
 ```
 
--   `start.draggableId`:的id`Draggable`现在正在拖延
--   `start.type`:`type`的`Draggable`现在正在拖延
+-   `start.draggableId`:的id`Draggable`现在正在拖拽
+-   `start.type`:`type`的`Draggable`现在正在拖拽
 -   `start.source`: 那个地点 (`droppableId`和`index`)拖动项目在a内开始的位置`Droppable`.
 
 ### `onDragStart`类型信息
@@ -105,8 +105,8 @@ type DragUpdate = {|
 |};
 ```
 
--   `update.draggableId`:的id`Draggable`现在正在拖延
--   `update.type`:`type`的`Draggable`现在正在拖延
+-   `update.draggableId`:的id`Draggable`现在正在拖拽
+-   `update.type`:`type`的`Draggable`现在正在拖拽
 -   `update.source`: 那个地点 (`droppableId`和`index`)拖动项目在a内开始的位置`Droppable`.
 -   `update.destination`: 那个地点 (`droppableId`和`index`)现在拖动项目的位置.如果用户当前没有拖动任何内容,则此值可以为null`Droppable`.
 
@@ -127,8 +127,8 @@ type DropResult = {|
 type DropReason = 'DROP' | 'CANCEL';
 ```
 
--   `result.draggableId`:的id`Draggable`那是拖延.
--   `result.type`:`type`的`Draggable`那是拖延.
+-   `result.draggableId`:的id`Draggable`那是拖拽.
+-   `result.type`:`type`的`Draggable`那是拖拽.
 -   `result.source`:所在的位置`Draggable`开始.
 -   `result.destination`:所在的位置`Draggable`完了.该`destination`将会`null`如果用户在没有超过a的情况下掉线`Droppable`.
 -   `result.reason`:发生跌落的原因.这些信息可以帮助您制作更有用的消息`HookProvided`>`announce`功能.
