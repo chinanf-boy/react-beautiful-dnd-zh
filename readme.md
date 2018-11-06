@@ -29,7 +29,7 @@
   - [x] [docs/guides/dragging-svgs.zh.md](docs/guides/dragging-svgs.zh.md)
   - [x] [docs/guides/screen-reader.zh.md](docs/guides/screen-reader.zh.md)
   - [x] [docs/guides/using-inner-ref.zh.md](docs/guides/using-inner-ref.zh.md)
-  - [ ] [docs/guides/how-we-use-dom-events.zh.md](docs/guides/how-we-use-dom-events.zh.md)
+  - [x] [docs/guides/how-we-use-dom-events.zh.md](docs/guides/how-we-use-dom-events.zh.md)
   - [x] [docs/guides/hooks.zh.md](docs/guides/hooks.zh.md)
   - [x] [docs/patterns/tables.zh.md](docs/patterns/tables.zh.md)
   - [x] [docs/patterns/using-a-portal.zh.md](docs/patterns/using-a-portal.zh.md)
