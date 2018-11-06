@@ -20,7 +20,7 @@
 -   `onClick`:如果作为拖动交互部分发生了，`event.defaultPrevented`属性将设置为`true`。即使拖动未完成诸如`mouseup`或`touchend`之类的预先单击操作。看[马虎点击和点击预防](https://github.com/chinanf-boy/react-beautiful-dnd-zh#%E9%A9%AC%E8%99%8E%E7%82%B9%E5%87%BB%E5%B9%B6%E7%82%B9%E5%87%BB%E9%A2%84%E9%98%B2).
 -   `onKeyDown`:如果它被用作拖拽的一部分，`event.defaultPrevented`属性将设置为`true`。如果你想添加`onKeyDown`到*拖动控制*，你将需要猴子补丁 下[`DragHandleProps`](https://github.com/chinanf-boy/react-beautiful-dnd-zh#draghandleprops%E7%B1%BB%E5%9E%8B%E4%BF%A1%E6%81%AF) `onKeyDown`事件处理程序
 
-您可能需要使用来自[`onDragStart`](./hooks.zh.md#ondragstart%E5%8F%AF%E9%80%89%E7%9A%84)和[`onDragEnd`](./hooks.zh.md#ondragend%E9%9C%80%E8%A6%81)的信息来提高事件处理程序的逻辑了解，明确知道在这些事件发生时，是否’交火‘了.
+您可能需要使用来自[`onDragStart`](./hooks.zh.md#ondragstart%E5%8F%AF%E9%80%89%E7%9A%84)和[`onDragEnd`](./hooks.zh.md#ondragend%E9%9C%80%E8%A6%81)的信息来提高事件处理程序的逻辑了解，明确知道在这些事件发生时，是否为一个拖动了.
 
 欢迎您添加其他事件处理程序,但您可能更需要`onDragStart`和`onDragEnd`的信息.
 

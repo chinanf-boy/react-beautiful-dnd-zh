@@ -9,7 +9,7 @@
 
 ---
 
-## 更新 中
+## 更新 ✅
 
 <!-- doc-templite START generated -->
 <!-- time = '2018 10.31' -->
@@ -25,15 +25,15 @@
 <!-- doc-templite END generated -->
 
 - [x] readme
-- [ ] docs/**
-  - [x] [docs/guides/dragging-svgs.zh.md](docs/guides/dragging-svgs.zh.md)
-  - [x] [docs/guides/screen-reader.zh.md](docs/guides/screen-reader.zh.md)
-  - [x] [docs/guides/using-inner-ref.zh.md](docs/guides/using-inner-ref.zh.md)
-  - [x] [docs/guides/how-we-use-dom-events.zh.md](docs/guides/how-we-use-dom-events.zh.md)
-  - [x] [docs/guides/hooks.zh.md](docs/guides/hooks.zh.md)
-  - [x] [docs/patterns/tables.zh.md](docs/patterns/tables.zh.md)
-  - [x] [docs/patterns/using-a-portal.zh.md](docs/patterns/using-a-portal.zh.md)
-  - [ ] [docs/patterns/multi-drag.zh.md](docs/patterns/multi-drag.zh.md)
+- [x] docs/**
+  - [x] [拖拽`<svg>`](docs/guides/dragging-svgs.zh.md)
+  - [x] [屏幕阅读器指南](docs/guides/screen-reader.zh.md)
+  - [x] [运用`innerRef`](docs/guides/using-inner-ref.zh.md)
+  - [x] [我们如何使用DOM事件](docs/guides/how-we-use-dom-events.zh.md)
+  - [x] [钩子-`Hook`s](docs/guides/hooks.zh.md)
+  - [x] [表格](docs/patterns/tables.zh.md)
+  - [x] [使用 portal](docs/patterns/using-a-portal.zh.md)
+  - [x] [多拖动模式](docs/patterns/multi-drag.zh.md)
 
 ### 贡献
 
