@@ -17,10 +17,10 @@
 
 > 这些都可以添加到*拖动控制*，'树'上任何其他地方或直接在window.
 
--   `onClick`:如果作为拖动交互部分发生了，`event.defaultPrevented`属性将设置为`true`。即使拖动未完成诸如`mouseup`或`touchend`之类的预先单击操作。看[马虎点击和点击预防](https://github.com/atlassian/react-beautiful-dnd#sloppy-clicks-and-click-prevention-).
--   `onKeyDown`:如果它被用作拖拽的一部分，`event.defaultPrevented`属性将设置为`true`。如果你想添加`onKeyDown`到*拖动控制*，你将需要猴子补丁 下[`DragHandleProps`](https://github.com/atlassian/react-beautiful-dnd#draghandleprops-type-information) `onKeyDown`事件处理程序
+-   `onClick`:如果作为拖动交互部分发生了，`event.defaultPrevented`属性将设置为`true`。即使拖动未完成诸如`mouseup`或`touchend`之类的预先单击操作。看[马虎点击和点击预防](https://github.com/chinanf-boy/react-beautiful-dnd-zh#%E9%A9%AC%E8%99%8E%E7%82%B9%E5%87%BB%E5%B9%B6%E7%82%B9%E5%87%BB%E9%A2%84%E9%98%B2).
+-   `onKeyDown`:如果它被用作拖拽的一部分，`event.defaultPrevented`属性将设置为`true`。如果你想添加`onKeyDown`到*拖动控制*，你将需要猴子补丁 下[`DragHandleProps`](https://github.com/chinanf-boy/react-beautiful-dnd-zh#draghandleprops%E7%B1%BB%E5%9E%8B%E4%BF%A1%E6%81%AF) `onKeyDown`事件处理程序
 
-您可能需要使用来自[`onDragStart`](https://github.com/atlassian/react-beautiful-dnd#ondragstart-optional)和[`onDragEnd`](https://github.com/atlassian/react-beautiful-dnd#ondragend-required)的信息来提高事件处理程序的逻辑了解，明确知道在这些事件发生时，是否’交火‘了.
+您可能需要使用来自[`onDragStart`](./hooks.zh.md#ondragstart%E5%8F%AF%E9%80%89%E7%9A%84)和[`onDragEnd`](./hooks.zh.md#ondragend%E9%9C%80%E8%A6%81)的信息来提高事件处理程序的逻辑了解，明确知道在这些事件发生时，是否’交火‘了.
 
 欢迎您添加其他事件处理程序,但您可能更需要`onDragStart`和`onDragEnd`的信息.
 
@@ -33,7 +33,7 @@
 -   我们用:`event.preventDefault()`
 -   我们不使用:`event.stopPropagation()`
 
-我们添加了一些事件处理程序到*拖动控制*本身(见[`DragHandleProps`](https://github.com/atlassian/react-beautiful-dnd#draghandleprops-type-information))和我们又添加了其他的到`window`在里面[捕获阶段](https://javascript.info/bubbling-and-capturing#capturing)。这意味着只要您在[冒泡阶段](https://javascript.info/bubbling-and-capturing#bubbling)中使用事件处理程序(这是事件处理程序的默认设置)，然后事件的行为将如此页面所述.
+我们添加了一些事件处理程序到*拖动控制*本身(见[`DragHandleProps`](https://github.com/chinanf-boy/react-beautiful-dnd-zh#draghandleprops%E7%B1%BB%E5%9E%8B%E4%BF%A1%E6%81%AF))和我们又添加了其他的到`window`在里面[捕获阶段](https://javascript.info/bubbling-and-capturing#capturing)。这意味着只要您在[冒泡阶段](https://javascript.info/bubbling-and-capturing#bubbling)中使用事件处理程序(这是事件处理程序的默认设置)，然后事件的行为将如此页面所述.
 
 为了知道我们是否已经把事件用在了拖放功能，您需要检查[`event.defaultPrevented`](https://developer.mozilla.org/en-US/docs/Web/API/Event/defaultPrevented)属性.
 
@@ -68,7 +68,7 @@ window.addEventListener('click', (event: MouseEvent) => {
 
 -   `preventDefault()`没有被调用
 
-在我们将运动视为拖动之前,用户需要移动一个小阈值。在这段时间我们不会在`任何`mousemove`事件调用`preventDefault(),因为我们不确定他们是拖动还是，只是[马虎点击](https://github.com/atlassian/react-beautiful-dnd#sloppy-clicks-and-click-prevention-)
+在我们将运动视为拖动之前,用户需要移动一个小阈值。在这段时间我们不会在`任何`mousemove`事件调用`preventDefault(),因为我们不确定他们是拖动还是，只是[马虎点击](https://github.com/chinanf-boy/react-beautiful-dnd-zh#%E9%A9%AC%E8%99%8E%E7%82%B9%E5%87%BB%E5%B9%B6%E7%82%B9%E5%87%BB%E9%A2%84%E9%98%B2)
 
 ### 用户表示他们不是鼠标拖动
 
@@ -85,7 +85,7 @@ window.addEventListener('click', (event: MouseEvent) => {
 
 -   `preventDefault()`在一个`mouseup`中被调用，如果它结束了拖动
 -   `preventDefault()`在**退出** <kbd>esc</kbd> `keydown`中被调用，如果因为它直接结束拖动
--   `preventDefault()`在下一个`click`事件时被调用，不管拖动是如何结束,都会发生事件.看[马虎点击和点击预防](https://github.com/atlassian/react-beautiful-dnd#sloppy-clicks-and-click-prevention-)
+-   `preventDefault()`在下一个`click`事件时被调用，不管拖动是如何结束,都会发生事件.看[马虎点击和点击预防](https://github.com/chinanf-boy/react-beautiful-dnd-zh#%E9%A9%AC%E8%99%8E%E7%82%B9%E5%87%BB%E5%B9%B6%E7%82%B9%E5%87%BB%E9%A2%84%E9%98%B2)
 -   `preventDefault()`不会在其他事件上调用，如`resize`间接结束了拖动
 -   `preventDefault()`在`keyup`事件不会被调用,即使它们导致拖动结束
 
@@ -122,7 +122,7 @@ window.addEventListener('click', (event: MouseEvent) => {
 
 ### 大力按压
 
-> 看[大力按压支持](https://github.com/atlassian/react-beautiful-dnd#force-press-support)
+> 看[大力按压支持](https://github.com/chinanf-boy/react-beautiful-dnd-zh#大力按压支持)
 
 -   如果拖动尚未开始，`preventDefault()`没有被调用`touchforcechange`
 -   如果拖动已经开始但尚未发生移动，`preventDefault()`没有被调用`touchforcechange`。重压会取消拖动且是间接取消.
