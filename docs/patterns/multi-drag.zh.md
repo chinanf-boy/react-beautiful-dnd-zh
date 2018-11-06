@@ -4,7 +4,7 @@
 
 一次拖动多个`Draggable`(多拖)，目前是一种需要在其`react-beautiful-dnd`上构建的模式。我们没有将这种功能纳入库本身。这样做是因为多拖动体验会引入了许多概念,决策和意见。我们已经做了很多工作来确保有一个标准的基础，其建立在[dom事件管理](how-we-use-dom-events.zh.md).
 
-我们创造了一个[参考应用](react-beautiful-dnd.netlify.com/iframe.html?selectedKind=Multi%20drag&selectedStory=pattern&full=0&down=1&left=1&panelRight=0&downPanel=storybook%2Factions%2Factions-panel)([源码](/stories/9-multi-drag-story.js))实现这种多拖模式。该应用程序是相当基本的,并不能很好地处理大型列表中的性能.因此,如果您想支持大于50的列表，这有[些我们使用的性能建议](#performance), 也添加到了我们的参考应用程序中.
+我们创造了一个[参考应用](react-beautiful-dnd.netlify.com/iframe.html?selectedKind=Multi%20drag&selectedStory=pattern&full=0&down=1&left=1&panelRight=0&downPanel=storybook%2Factions%2Factions-panel)([源码](https://github.com/atlassian/react-beautiful-dnd/blob/master/stories/9-multi-drag-story.js))实现这种多拖模式。该应用程序是相当基本的,并不能很好地处理大型列表中的性能.因此,如果您想支持大于50的列表，这有[些我们使用的性能建议](#performance), 也添加到了我们的参考应用程序中.
 
 ![multi drag demo](https://user-images.githubusercontent.com/2182637/37322724-7843a218-26d3-11e8-9ebb-8d5853387bb3.gif)
 
