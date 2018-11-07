@@ -39,6 +39,8 @@
 
 欢迎 👏 勘误/校对/更新贡献 😊 [具体贡献请看](https://github.com/chinanf-boy/chinese-translate-list#贡献)
 
+更新了版本，但有点走神，多多见谅，大力Issue与PR，致歉
+
 ## 生活
 
 [help me live , live need money 💰](https://github.com/chinanf-boy/live-need-money)
